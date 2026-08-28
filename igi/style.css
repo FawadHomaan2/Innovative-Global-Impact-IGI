@@ -1,0 +1,21 @@
+/*
+Theme Name: Innovative Global Impact
+Theme URI: https://innovativeglobalimpact.org/
+Author: IGI / Claude Design build
+Author URI: https://innovativeglobalimpact.org/
+Description: Dignity-first WordPress block theme for Innovative Global Impact (IGI) — a nonprofit building frugal, off-grid engineering pilots. Restrained chrome, documentary photography, GiveWP-ready donate pattern, and the "turn" transformation signature. Self-hosted Fraunces / Hanken Grotesk / Spline Sans Mono.
+Requires at least: 6.1
+Tested up to: 6.6
+Requires PHP: 7.4
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: igi
+Tags: nonprofit, block-theme, full-site-editing, editorial, custom-colors, custom-logo, accessibility-ready
+*/
+
+/*
+ * Theme styling lives mostly in theme.json (tokens) and assets/css/igi.css
+ * (components). This file carries the required theme header; igi.css is
+ * enqueued for both the front end and the editor from functions.php.
+ */

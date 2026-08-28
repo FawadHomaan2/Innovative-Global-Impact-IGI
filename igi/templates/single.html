@@ -1,0 +1,37 @@
+<!-- wp:template-part {"slug":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"igi-main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group igi-main">
+
+	<!-- Article hero: the post's Featured Image, with the Category as eyebrow,
+	     the Title, and the date. All driven by the post — author writes nothing. -->
+	<!-- wp:cover {"useFeaturedImage":true,"dimRatio":55,"overlayColor":"ink","isUserOverlayColor":true,"minHeight":58,"minHeightUnit":"vh","contentPosition":"bottom left","align":"full","className":"igi-article-hero igi-on-dark"} -->
+	<div class="wp-block-cover alignfull igi-article-hero igi-on-dark is-position-bottom-left" style="min-height:58vh"><span aria-hidden="true" class="wp-block-cover__background has-ink-background-color has-background-dim-50 has-background-dim"></span><div class="wp-block-cover__inner-container">
+		<!-- wp:group {"className":"igi-article-hero__inner","style":{"spacing":{"blockGap":"0.7rem"}},"layout":{"type":"constrained","contentSize":"840px","justifyContent":"left"}} -->
+		<div class="wp-block-group igi-article-hero__inner">
+			<!-- wp:post-terms {"term":"category","className":"igi-article-eyebrow"} /-->
+			<!-- wp:post-title {"level":1,"fontSize":"xx-large"} /-->
+			<!-- wp:post-date {"className":"igi-article-meta","format":"F Y"} /-->
+		</div>
+		<!-- /wp:group -->
+	</div></div>
+	<!-- /wp:cover -->
+
+	<!-- Article body: whatever the author types as normal blocks, in a styled column. -->
+	<!-- wp:group {"className":"igi-section igi-article","align":"full","layout":{"type":"constrained","contentSize":"720px"}} -->
+	<div class="wp-block-group alignfull igi-section igi-article">
+		<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+
+		<!-- wp:group {"className":"igi-article__back","style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}},"layout":{"type":"flex"}} -->
+		<div class="wp-block-group igi-article__back" style="margin-top:var(--wp--preset--spacing--50)">
+			<!-- wp:paragraph {"className":"igi-arrowlink"} --><p class="igi-arrowlink"><a href="/news/">← All news</a></p><!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:pattern {"slug":"igi/cta-band"} /-->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->

@@ -1,0 +1,183 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"useRootPaddingAwareAlignments": true,
+		"layout": {
+			"contentSize": "720px",
+			"wideSize": "1280px"
+		},
+		"color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"custom": true,
+			"customDuotone": false,
+			"palette": [
+				{ "slug": "ink",       "name": "Ink Umber",   "color": "#241C17" },
+				{ "slug": "marigold",  "name": "Ink · marigold", "color": "#241C17" },
+				{ "slug": "water",     "name": "Ink · water",    "color": "#241C17" },
+				{ "slug": "ember",     "name": "Ink · ember",    "color": "#241C17" },
+				{ "slug": "adobe",     "name": "Adobe",       "color": "#E4D8C6" },
+				{ "slug": "paper",     "name": "Paper",       "color": "#FAF8F4" },
+				{ "slug": "taupe",     "name": "Taupe",       "color": "#C9BCA8" },
+				{ "slug": "white",     "name": "White",       "color": "#FFFFFF" }
+			]
+		},
+		"typography": {
+			"fluid": true,
+			"customFontSize": true,
+			"dropCap": false,
+			"writingMode": false,
+			"lineHeight": true,
+			"fontFamilies": [
+				{
+					"slug": "display",
+					"name": "Newsreader",
+					"fontFamily": "Newsreader, 'Iowan Old Style', Georgia, 'Times New Roman', serif",
+					"fontFace": [
+						{ "fontFamily": "Newsreader", "fontWeight": "400", "fontStyle": "normal", "fontDisplay": "swap", "src": [ "file:./assets/fonts/newsreader-400.woff2" ] },
+						{ "fontFamily": "Newsreader", "fontWeight": "500", "fontStyle": "normal", "fontDisplay": "swap", "src": [ "file:./assets/fonts/newsreader-500.woff2" ] },
+						{ "fontFamily": "Newsreader", "fontWeight": "600", "fontStyle": "normal", "fontDisplay": "swap", "src": [ "file:./assets/fonts/newsreader-600.woff2" ] },
+						{ "fontFamily": "Newsreader", "fontWeight": "400", "fontStyle": "italic", "fontDisplay": "swap", "src": [ "file:./assets/fonts/newsreader-italic-400.woff2" ] },
+						{ "fontFamily": "Newsreader", "fontWeight": "500", "fontStyle": "italic", "fontDisplay": "swap", "src": [ "file:./assets/fonts/newsreader-italic-500.woff2" ] },
+						{ "fontFamily": "Newsreader", "fontWeight": "600", "fontStyle": "italic", "fontDisplay": "swap", "src": [ "file:./assets/fonts/newsreader-italic-600.woff2" ] }
+					]
+				},
+				{
+					"slug": "body",
+					"name": "Hanken Grotesk",
+					"fontFamily": "'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+					"fontFace": [
+						{ "fontFamily": "Hanken Grotesk", "fontWeight": "400", "fontStyle": "normal", "fontDisplay": "swap", "src": [ "file:./assets/fonts/hanken-400.woff2" ] },
+						{ "fontFamily": "Hanken Grotesk", "fontWeight": "500", "fontStyle": "normal", "fontDisplay": "swap", "src": [ "file:./assets/fonts/hanken-500.woff2" ] },
+						{ "fontFamily": "Hanken Grotesk", "fontWeight": "600", "fontStyle": "normal", "fontDisplay": "swap", "src": [ "file:./assets/fonts/hanken-600.woff2" ] },
+						{ "fontFamily": "Hanken Grotesk", "fontWeight": "700", "fontStyle": "normal", "fontDisplay": "swap", "src": [ "file:./assets/fonts/hanken-700.woff2" ] }
+					]
+				},
+				{
+					"slug": "mono",
+					"name": "Spline Sans Mono",
+					"fontFamily": "'Spline Sans Mono', ui-monospace, 'SF Mono', 'IBM Plex Mono', Menlo, Consolas, monospace",
+					"fontFace": [
+						{ "fontFamily": "Spline Sans Mono", "fontWeight": "400", "fontStyle": "normal", "fontDisplay": "swap", "src": [ "file:./assets/fonts/spline-mono-400.woff2" ] },
+						{ "fontFamily": "Spline Sans Mono", "fontWeight": "500", "fontStyle": "normal", "fontDisplay": "swap", "src": [ "file:./assets/fonts/spline-mono-500.woff2" ] }
+					]
+				}
+			],
+			"fontSizes": [
+				{ "slug": "x-small", "name": "X-Small", "size": "0.8125rem", "fluid": false },
+				{ "slug": "small",   "name": "Small",   "size": "0.95rem",   "fluid": false },
+				{ "slug": "medium",  "name": "Medium",  "size": "1.125rem",  "fluid": { "min": "1.0625rem", "max": "1.1875rem" } },
+				{ "slug": "large",   "name": "Large",   "size": "1.5rem",    "fluid": { "min": "1.3125rem", "max": "1.625rem" } },
+				{ "slug": "x-large", "name": "X-Large", "size": "2.5rem",    "fluid": { "min": "1.75rem",   "max": "3rem" } },
+				{ "slug": "xx-large","name": "XX-Large","size": "3.75rem",   "fluid": { "min": "2.375rem",  "max": "4.625rem" } },
+				{ "slug": "display", "name": "Display", "size": "4.5rem",    "fluid": { "min": "2.5rem",    "max": "5.125rem" } }
+			]
+		},
+		"spacing": {
+			"units": [ "px", "em", "rem", "vh", "vw", "%" ],
+			"spacingSizes": [
+				{ "slug": "20", "name": "X-Small", "size": "0.5rem" },
+				{ "slug": "30", "name": "Small",   "size": "1rem" },
+				{ "slug": "40", "name": "Medium",  "size": "1.75rem" },
+				{ "slug": "50", "name": "Large",   "size": "3rem" },
+				{ "slug": "60", "name": "X-Large", "size": "4.5rem" },
+				{ "slug": "70", "name": "2X-Large","size": "6.5rem" },
+				{ "slug": "80", "name": "Section", "size": "clamp(4.5rem, 9vw, 9rem)" }
+			]
+		},
+		"border": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true
+		},
+		"custom": {
+			"line-flow": "#241C17",
+			"shadow-card": "0 1px 2px rgba(36, 28, 23, 0.06), 0 12px 28px -18px rgba(36, 28, 23, 0.45)"
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--paper)",
+			"text": "var(--wp--preset--color--ink)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--body)",
+			"fontSize": "var(--wp--preset--font-size--medium)",
+			"lineHeight": "1.65",
+			"fontWeight": "400",
+			"letterSpacing": "-0.003em"
+		},
+		"spacing": {
+			"blockGap": "1.5rem",
+			"padding": {
+				"left": "var(--wp--preset--spacing--40)",
+				"right": "var(--wp--preset--spacing--40)"
+			}
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--display)",
+					"fontWeight": "400",
+					"lineHeight": "1.05",
+					"letterSpacing": "-0.012em"
+				}
+			},
+			"h1": { "typography": { "fontSize": "var(--wp--preset--font-size--xx-large)" } },
+			"h2": { "typography": { "fontSize": "var(--wp--preset--font-size--x-large)" } },
+			"h3": { "typography": { "fontSize": "var(--wp--preset--font-size--large)", "lineHeight": "1.18" } },
+			"h4": { "typography": { "fontSize": "var(--wp--preset--font-size--large)", "fontWeight": "600", "lineHeight": "1.2" } },
+			"h5": { "typography": { "fontFamily": "var(--wp--preset--font-family--mono)", "fontSize": "var(--wp--preset--font-size--x-small)", "fontWeight": "500", "lineHeight": "1.3", "letterSpacing": "0.08em", "textTransform": "uppercase" } },
+			"h6": { "typography": { "fontFamily": "var(--wp--preset--font-family--mono)", "fontSize": "var(--wp--preset--font-size--x-small)", "fontWeight": "500", "lineHeight": "1.3", "letterSpacing": "0.08em", "textTransform": "uppercase" } },
+			"link": {
+				"color": { "text": "var(--wp--preset--color--ink)" },
+				"typography": { "textDecoration": "underline" },
+				":hover": { "color": { "text": "#635a50" } }
+			},
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--ink)",
+					"text": "var(--wp--preset--color--paper)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--body)",
+					"fontWeight": "600",
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"letterSpacing": "0.01em",
+					"textDecoration": "none"
+				},
+				"border": { "radius": "999px" },
+				"spacing": { "padding": { "top": "0.85rem", "bottom": "0.85rem", "left": "1.6rem", "right": "1.6rem" } },
+				":hover": { "color": { "background": "#3a2f28", "text": "var(--wp--preset--color--paper)" } },
+				":focus": { "color": { "background": "#3a2f28", "text": "var(--wp--preset--color--paper)" } }
+			}
+		},
+		"blocks": {
+			"core/site-title": {
+				"typography": { "fontFamily": "var(--wp--preset--font-family--display)", "fontWeight": "600", "fontSize": "1.25rem" }
+			},
+			"core/post-title": {
+				"typography": { "fontFamily": "var(--wp--preset--font-family--display)", "fontWeight": "600", "lineHeight": "1.1" }
+			},
+			"core/pullquote": {
+				"typography": { "fontFamily": "var(--wp--preset--font-family--display)" }
+			},
+			"core/quote": {
+				"typography": { "fontFamily": "var(--wp--preset--font-family--display)" }
+			}
+		}
+	},
+	"templateParts": [
+		{ "name": "header", "title": "Header", "area": "header" },
+		{ "name": "footer", "title": "Footer", "area": "footer" }
+	],
+	"customTemplates": [
+		{ "name": "page-campaigns", "title": "Campaigns", "postTypes": [ "page" ] },
+		{ "name": "page-our-work",  "title": "Our Work & Impact", "postTypes": [ "page" ] },
+		{ "name": "page-about",     "title": "About", "postTypes": [ "page" ] },
+		{ "name": "page-contact",   "title": "Contact", "postTypes": [ "page" ] }
+	]
+}

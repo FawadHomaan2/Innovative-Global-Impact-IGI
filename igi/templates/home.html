@@ -1,0 +1,80 @@
+<!-- wp:template-part {"slug":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"igi-main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group igi-main">
+
+	<!-- Hero (static, full-bleed so the transparent header sits over the photo, not the page margin) -->
+	<!-- wp:group {"align":"full","layout":{"type":"default"}} -->
+	<div class="wp-block-group alignfull">
+	<!-- wp:html -->
+	<section class="igi-newshero" style="position:relative;min-height:clamp(360px,50vh,460px);padding-top:clamp(96px,11vh,120px);display:flex;align-items:flex-end;background:rgb(23,18,14);">
+		<img src="/wp-content/themes/igi/assets/images/ghor-landscape-village.jpg" alt="Hillside adobe village in Ghor against the mountains" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+		<div style="position:absolute;inset:0;background:linear-gradient(rgba(23,18,14,0.66) 0%,rgba(23,18,14,0.3) 44%,rgba(23,18,14,0.92) 100%);"></div>
+		<div style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,56px) clamp(40px,5vw,64px);">
+			<div style="font-family:'Spline Sans Mono',monospace;font-size:12.5px;letter-spacing:0.18em;text-transform:uppercase;color:rgb(237,230,218);margin-bottom:18px;">News</div>
+			<h1 style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(38px,5.2vw,70px);line-height:1;letter-spacing:-0.012em;color:rgb(251,247,240);margin:0;">News &amp; field notes</h1>
+		</div>
+	</section>
+	<!-- /wp:html -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Dynamic post list -->
+	<!-- wp:group {"className":"igi-newssection","align":"full","layout":{"type":"constrained","contentSize":"1280px"}} -->
+	<div class="wp-block-group alignfull igi-newssection">
+		<!-- wp:query {"queryId":1,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":true},"className":"igi-newsquery"} -->
+		<div class="wp-block-query igi-newsquery">
+			<!-- wp:post-template {"className":"igi-newsgrid"} -->
+				<!-- wp:group {"className":"igi-ncard","layout":{"type":"default"}} -->
+				<div class="wp-block-group igi-ncard">
+					<!-- wp:post-featured-image {"isLink":true,"className":"igi-ncard__img"} /-->
+					<!-- wp:group {"className":"igi-ncard__body","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group igi-ncard__body">
+						<!-- wp:group {"className":"igi-ncard__meta","layout":{"type":"flex","flexWrap":"wrap"}} -->
+						<div class="wp-block-group igi-ncard__meta">
+							<!-- wp:post-terms {"term":"category","className":"igi-ncard__cat"} /-->
+							<!-- wp:post-date {"className":"igi-ncard__date","format":"F Y"} /-->
+						</div>
+						<!-- /wp:group -->
+						<!-- wp:post-title {"isLink":true,"level":2,"className":"igi-ncard__title"} /-->
+						<!-- wp:post-excerpt {"moreText":"Read →","showMoreOnNewLine":true,"excerptLength":32,"className":"igi-ncard__excerpt"} /-->
+					</div>
+					<!-- /wp:group -->
+				</div>
+				<!-- /wp:group -->
+			<!-- /wp:post-template -->
+
+			<!-- wp:query-pagination {"paginationArrow":"arrow","className":"igi-newspag","layout":{"type":"flex","justifyContent":"space-between"}} -->
+				<!-- wp:query-pagination-previous /-->
+				<!-- wp:query-pagination-numbers /-->
+				<!-- wp:query-pagination-next /-->
+			<!-- /wp:query-pagination -->
+
+			<!-- wp:query-no-results -->
+				<!-- wp:paragraph --><p>No field notes published yet — check back soon.</p><!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
+		</div>
+		<!-- /wp:query -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Newsletter band (static) -->
+	<!-- wp:html -->
+	<section class="igi-nl-band" style="background:rgb(228,216,198);padding:clamp(56px,7vw,96px) clamp(20px,5vw,56px);">
+		<div style="max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;gap:clamp(28px,5vw,72px);align-items:flex-start;">
+			<div style="flex:1 1 380px;min-width:min(100%,380px);">
+				<h2 style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(25px,2.8vw,38px);line-height:1.14;color:rgb(36,28,23);margin:0;">Get field notes in your inbox.</h2>
+				<p style="font-size:16px;line-height:1.55;color:rgb(90,80,68);margin-top:14px;max-width:30em;">Occasional updates — what we built, what we measured, what's next.</p>
+			</div>
+			<form style="flex:1 1 360px;min-width:min(100%,360px);display:flex;flex-wrap:wrap;gap:10px;padding-top:6px;" action="#" method="post">
+				<input type="email" placeholder="you@email.com" aria-label="Email address" required style="flex:1 1 200px;min-width:0;font-family:'Hanken Grotesk';font-size:16px;color:rgb(36,28,23);background:rgb(250,248,244);border:1px solid rgb(201,188,168);border-radius:999px;padding:15px 20px;">
+				<button type="submit" style="flex:0 0 auto;font-size:15px;font-weight:700;color:rgb(250,248,244);background:rgb(36,28,23);border:none;padding:15px 28px;border-radius:999px;cursor:pointer;">Subscribe</button>
+			</form>
+		</div>
+	</section>
+	<!-- /wp:html -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->
