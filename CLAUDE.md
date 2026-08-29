@@ -45,8 +45,20 @@ If the app password is ever lost or leaked, revoke it in WordPress
   2. Deploy it to the server via the WordPress **Theme File Editor**
      (`wp-admin/theme-editor.php`, form field `newcontent`, nonce field named
      `nonce`). File editing is enabled and the theme dir is writable.
-  3. Verify on the live URL (add a `?nocache=...` query to bypass WP Fastest
-     Cache), then commit and push (see below).
+  3. **Clear WP Fastest Cache** — otherwise anonymous visitors keep seeing the
+     old cached HTML (logged-in admins bypass the cache, so it will *look*
+     updated to you while everyone else sees the stale page). This step is
+     mandatory after every theme-code change. Two ways:
+     - In wp-admin: top toolbar → **WP Fastest Cache → Clear All Cache**.
+     - Programmatically (logged-in cookie): a `GET` to `wp-admin/admin-ajax.php`
+       with `action=wpfc_delete_cache_and_minified`, `path=/`, and
+       `nonce=<wpfc_nonce>` (read the `wpfc_nonce` JS var from any wp-admin
+       page). An empty response means success; `Security check` means a bad or
+       missing nonce.
+  4. Verify as the **public** sees it: fetch the plain live URL with **no login
+     cookie and no query string** (a `?nocache=...` query bypasses the cache
+     and hides a stale-cache problem — use it only to check the fresh render,
+     never as proof the public page updated). Then commit and push (see below).
 
 Note: a site filter rewrites `linkedin.com` links in block-list markup
 (displays "Linkedin", drops target/rel). It's the site's own behavior, not a
