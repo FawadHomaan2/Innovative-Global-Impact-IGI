@@ -48,6 +48,7 @@ $igi_year = wp_date( 'Y' );
 			<ul class="wp-block-list" style="line-height:2">
 				<!-- wp:list-item --><li><a href="https://www.facebook.com/profile.php?id=61575755775907" rel="noopener" target="_blank">Facebook</a></li><!-- /wp:list-item -->
 				<!-- wp:list-item --><li><a href="https://www.instagram.com/innovative_global_impact" rel="noopener" target="_blank">Instagram</a></li><!-- /wp:list-item -->
+				<!-- wp:list-item --><li><a href="https://www.linkedin.com/company/innovative-global-impact" rel="noopener" target="_blank">LinkedIn</a></li><!-- /wp:list-item -->
 				<!-- wp:list-item --><li><a <?php echo igi_give_attr( 'general' ); ?> class="igi-give-trigger igi-footer__donate" href="<?php echo esc_url( home_url( '/campaigns/' ) ); ?>">Donate</a></li><!-- /wp:list-item -->
 			</ul>
 			<!-- /wp:list -->

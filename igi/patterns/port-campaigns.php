@@ -59,14 +59,11 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
         </div>
       </div>
 
-      <!-- SURVIVAL · GHOR (type-led — no imagery) -->
+      <!-- SURVIVAL · GHOR (newborn care photo) -->
       <div data-rev style="display: flex; flex-direction: column; background: #fff; border: 1px solid rgb(228, 216, 198); border-radius: 8px; overflow: hidden;">
-        <div style="position: relative; aspect-ratio: 4/3; overflow: hidden; background: rgb(29, 20, 16); display: flex; align-items: center; justify-content: center; padding: 28px;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: rgb(201, 188, 168);"></div>
-          <div style="text-align: center;">
-            <div style="font-family: 'Spline Sans Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(237, 230, 218); margin-bottom: 16px;">Off-grid newborn care</div>
-            <div style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 500; font-size: clamp(30px, 3vw, 40px); line-height: 1.1; color: rgb(251, 247, 240);">Warmth when<br>the grid goes <span style="color: rgb(237, 230, 218);">dark</span>.</div>
-          </div>
+        <div style="position: relative; aspect-ratio: 4/3; overflow: hidden;">
+          <img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/08/newborns-scaled.jpg' ) ); ?>" alt="A newborn baby receiving care in a maternity and newborn unit in Ghor" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: rgb(36, 28, 23);"></div>
         </div>
         <div style="display: flex; flex-direction: column; flex: 1; padding: clamp(24px, 2.2vw, 32px);">
           <div style="font-family: 'Spline Sans Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(99, 90, 80); margin-bottom: 14px;">Survival · Ghor</div>
