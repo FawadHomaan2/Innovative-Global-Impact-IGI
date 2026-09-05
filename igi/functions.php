@@ -262,11 +262,21 @@ function igi_give_attr( $key ) {
 
 /** Render the modal(s) for every form referenced on this page (deduped). */
 function igi_render_donate_modals() {
-	if ( empty( $GLOBALS['igi_donate_forms'] ) ) {
+	// Forms explicitly registered this request (via igi_give_attr), unioned with
+	// the full slug -> ID map. Buttons inserted through a block pattern (e.g. the
+	// campaign cards in igi/port-campaigns) can have their data-igi-give attribute
+	// served from WordPress's cached pattern HTML without re-running the PHP that
+	// registers the modal — so relying on the side-effect alone leaves those
+	// modals unrendered and the buttons fall through to their href="#". Always
+	// rendering a modal for every mapped form guarantees each button has its
+	// target. Modals are hidden with lazy iframes, so the extra ones cost nothing.
+	$registered = ! empty( $GLOBALS['igi_donate_forms'] ) ? array_keys( $GLOBALS['igi_donate_forms'] ) : array();
+	$ids        = array_filter( array_unique( array_map( 'absint', array_merge( $registered, array_values( igi_give_forms() ) ) ) ) );
+	if ( empty( $ids ) ) {
 		return;
 	}
 	$active = igi_givewp_active();
-	foreach ( array_keys( $GLOBALS['igi_donate_forms'] ) as $id ) {
+	foreach ( $ids as $id ) {
 		$id = absint( $id );
 		echo '<div class="igi-give-modal" id="igi-give-modal-' . esc_attr( $id ) . '" role="dialog" aria-modal="true" aria-label="Make a donation" hidden>';
 		echo '<div class="igi-give-modal__backdrop" data-igi-give-close></div>';
