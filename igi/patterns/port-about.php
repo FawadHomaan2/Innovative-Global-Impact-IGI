@@ -44,6 +44,9 @@
         <p data-dc-tpl="39" style="font-family: Newsreader, serif; font-weight: 400; font-size: clamp(22px, 2.6vw, 33px); line-height: 1.32; letter-spacing: -0.005em; color: rgb(251, 247, 240);">Innovative Global Impact is a nonprofit dedicated to reducing poverty through <span data-dc-tpl="40" style="font-style: italic; color: rgb(237, 230, 218);">sustainable economic development</span> — designing programs that expand access to education, entrepreneurship, and opportunity.</p>
         <p data-dc-tpl="41" style="font-size: clamp(16px, 1.5vw, 18px); line-height: 1.65; color: rgb(179, 167, 148); margin-top: 24px; max-width: 40em;">Capable people are excluded from economic opportunity not for lack of talent, but for lack of access to education, capital, and markets. Traditional aid often meets immediate needs without creating pathways to long-term independence. IGI was created to bridge that gap — prioritizing long-term resilience over short-term aid, and investing in people and locally-driven solutions so communities can build economies that are inclusive, self-sustaining, and owned by those who live within them.</p>
       </div>
+      <div style="flex: 1 1 340px; min-width: min(100%, 340px);">
+        <img src="https://innovativeglobalimpact.org/wp-content/uploads/2026/09/Image-7-1024x768.jpeg" alt="Families collecting water together in rural Ghor" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid rgba(237, 230, 218, 0.2); display: block;">
+      </div>
     </div>
   </section>
 
