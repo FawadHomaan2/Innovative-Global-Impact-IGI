@@ -36,6 +36,11 @@
     </div>
   </section>
 
+  <!-- Field band -->
+  <section style="background: rgb(23, 18, 14);">
+    <img src="https://innovativeglobalimpact.org/wp-content/uploads/2026/09/well-scaled.jpg" alt="Workers hand-digging a water well in rural Ghor" loading="lazy" style="width: 100%; height: clamp(260px, 40vw, 500px); object-fit: cover; display: block;">
+  </section>
+
   
   <section data-dc-tpl="34" style="background: rgb(23, 18, 14); color: rgb(228, 216, 198); padding: clamp(60px, 8vw, 116px) clamp(20px, 5vw, 56px);">
     <div data-dc-tpl="35" style="max-width: 1100px; margin: 0px auto; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
