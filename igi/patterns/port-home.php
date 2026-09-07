@@ -29,11 +29,14 @@
 
   
   <section data-dc-tpl="27" style="background: rgb(250, 248, 244); padding: clamp(60px, 8vw, 120px) clamp(20px, 5vw, 56px);">
-    <div data-dc-tpl="28" style="max-width: 1100px; margin: 0px auto; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
-      <div data-dc-tpl="29" style="flex: 0 0 auto; width: min(100%, 190px);"><div data-dc-tpl="30" style="font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(99, 90, 80); padding-top: 12px;">Why we exist</div></div>
-      <div data-dc-tpl="31" style="flex: 1 1 440px; min-width: min(100%, 440px);">
+    <div data-dc-tpl="28" style="max-width: 1180px; margin: 0px auto; display: flex; flex-wrap: wrap; align-items: center; gap: clamp(32px, 5vw, 72px);">
+      <div style="flex: 1 1 420px; min-width: min(100%, 420px);">
+        <div data-dc-tpl="30" style="font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(99, 90, 80); margin-bottom: 22px;">Why we exist</div>
         <p data-dc-tpl="32" data-rev="" style="font-family: Newsreader, serif; font-weight: 400; font-size: clamp(25px, 3vw, 40px); line-height: 1.3; letter-spacing: -0.005em; color: rgb(36, 28, 23);">Capable people are excluded from opportunity not for lack of talent, but for lack of access to <span data-dc-tpl="33" style="font-style: italic; color: rgb(36, 28, 23);">education, capital, and markets</span>. Traditional aid meets the moment; it rarely builds a way out. IGI exists to bridge that gap.</p>
         <a data-dc-tpl="34" href="/about/" class="scp2" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 30px; font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 13.5px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: rgb(36, 28, 23); text-decoration: none; border-bottom: 1.5px solid rgb(36, 28, 23); padding-bottom: 3px;">About our mission →</a>
+      </div>
+      <div style="flex: 1 1 420px; min-width: min(100%, 420px);">
+        <img src="https://innovativeglobalimpact.org/wp-content/uploads/2026/09/attar-1-1024x768.jpeg" alt="Community harvesting roses together in a field in Nangarhar" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid rgb(228, 216, 198); display: block;">
       </div>
     </div>
   </section>
@@ -69,17 +72,20 @@
         <a data-dc-tpl="63" href="/campaigns/" class="scp4" style="font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: rgb(228, 216, 198); text-decoration: none; padding-bottom: 6px; border-bottom: 1px solid rgba(228, 216, 198, 0.4);">All campaigns →</a>
       </div>
       <div data-dc-tpl="64" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: clamp(14px, 1.6vw, 20px);">
-        <a data-dc-tpl="65" data-rev="" href="/campaigns/" class="scp5" style="text-decoration: none; display: flex; flex-direction: column; gap: 12px; background: rgba(250, 248, 244, 0.05); border: 1px solid rgba(201, 188, 168, 0.45); border-radius: 4px; padding: 26px 24px 28px;">
+        <a data-dc-tpl="65" data-rev="" href="/campaigns/" class="scp5" style="text-decoration: none; display: flex; flex-direction: column; gap: 12px; background: rgba(250, 248, 244, 0.05); border: 1px solid rgba(201, 188, 168, 0.45); border-radius: 6px; overflow: hidden; padding: 26px 24px 28px;">
+          <img src="https://innovativeglobalimpact.org/wp-content/uploads/2026/09/Image-3-1024x768.jpeg" alt="Children beside rows of water jerrycans in Ghor" loading="lazy" style="width: calc(100% + 48px); margin: -26px -24px 4px; aspect-ratio: 16 / 10; object-fit: cover; display: block;">
           <div data-dc-tpl="66" style="font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(237, 230, 218);">Water · Ghor</div>
           <div data-dc-tpl="67" style="font-family: Newsreader, serif; font-size: 25px; line-height: 1.1; color: rgb(251, 247, 240);">Water that never <span data-dc-tpl="68" style="font-style: italic; color: rgb(237, 230, 218);">reaches</span> them</div>
           <div data-dc-tpl="69" style="font-size: 14.5px; line-height: 1.5; color: rgb(194, 182, 164);">Solar pumping, elevated tanks, gravity-fed distribution.</div>
         </a>
-        <a data-dc-tpl="70" data-rev="" href="/campaigns/" class="scp6" style="text-decoration: none; display: flex; flex-direction: column; gap: 12px; background: rgba(250, 248, 244, 0.05); border: 1px solid rgba(201, 188, 168, 0.45); border-radius: 4px; padding: 26px 24px 28px;">
+        <a data-dc-tpl="70" data-rev="" href="/campaigns/" class="scp6" style="text-decoration: none; display: flex; flex-direction: column; gap: 12px; background: rgba(250, 248, 244, 0.05); border: 1px solid rgba(201, 188, 168, 0.45); border-radius: 6px; overflow: hidden; padding: 26px 24px 28px;">
+          <img src="https://innovativeglobalimpact.org/wp-content/uploads/2026/09/attar-2-1024x683.jpg" alt="Harvesting roses for the Women's Attar Collective in Nangarhar" loading="lazy" style="width: calc(100% + 48px); margin: -26px -24px 4px; aspect-ratio: 16 / 10; object-fit: cover; display: block;">
           <div data-dc-tpl="71" style="font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(237, 230, 218);">Opportunity · Nangarhar</div>
           <div data-dc-tpl="72" style="font-family: Newsreader, serif; font-size: 25px; line-height: 1.1; color: rgb(251, 247, 240);">Where poverty <span data-dc-tpl="73" style="font-style: italic; color: rgb(237, 230, 218);">becomes</span> opportunity</div>
           <div data-dc-tpl="74" style="font-size: 14.5px; line-height: 1.5; color: rgb(194, 182, 164);">A women's collective producing high-value natural attar.</div>
         </a>
-        <a data-dc-tpl="75" data-rev="" href="/campaigns/" class="scp7" style="text-decoration: none; display: flex; flex-direction: column; gap: 12px; background: rgba(250, 248, 244, 0.05); border: 1px solid rgba(201, 188, 168, 0.5); border-radius: 4px; padding: 26px 24px 28px;">
+        <a data-dc-tpl="75" data-rev="" href="/campaigns/" class="scp7" style="text-decoration: none; display: flex; flex-direction: column; gap: 12px; background: rgba(250, 248, 244, 0.05); border: 1px solid rgba(201, 188, 168, 0.5); border-radius: 6px; overflow: hidden; padding: 26px 24px 28px;">
+          <img src="https://innovativeglobalimpact.org/wp-content/uploads/2026/09/hospital-1-1024x577.jpg" alt="A health worker in a newborn care ward in Ghor" loading="lazy" style="width: calc(100% + 48px); margin: -26px -24px 4px; aspect-ratio: 16 / 10; object-fit: cover; display: block;">
           <div data-dc-tpl="76" style="font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(237, 230, 218);">Survival · Ghor</div>
           <div data-dc-tpl="77" style="font-family: Newsreader, serif; font-size: 25px; line-height: 1.1; color: rgb(251, 247, 240);">When birth <span data-dc-tpl="78" style="font-style: italic; color: rgb(237, 230, 218);">becomes</span> survival</div>
           <div data-dc-tpl="79" style="font-size: 14.5px; line-height: 1.5; color: rgb(194, 182, 164);">Electricity-free warmers and solar-supported oxygen.</div>
