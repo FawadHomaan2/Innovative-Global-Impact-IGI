@@ -38,14 +38,14 @@
 
   
   <section data-dc-tpl="34" style="background: rgb(23, 18, 14); color: rgb(228, 216, 198); padding: clamp(60px, 8vw, 116px) clamp(20px, 5vw, 56px);">
-    <div data-dc-tpl="35" style="max-width: 1100px; margin: 0px auto; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
-      <div data-dc-tpl="36" style="flex: 0 0 auto; width: min(100%, 190px);"><div data-dc-tpl="37" style="font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(237, 230, 218); padding-top: 12px;">Who we are</div></div>
-      <div data-dc-tpl="38" style="flex: 1 1 440px; min-width: min(100%, 440px);">
+    <div data-dc-tpl="35" style="max-width: 1180px; margin: 0px auto; display: flex; flex-wrap: wrap; align-items: center; gap: clamp(32px, 5vw, 72px);">
+      <div style="flex: 1 1 420px; min-width: min(100%, 420px);">
+        <div data-dc-tpl="37" style="font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(237, 230, 218); margin-bottom: 22px;">Who we are</div>
         <p data-dc-tpl="39" style="font-family: Newsreader, serif; font-weight: 400; font-size: clamp(22px, 2.6vw, 33px); line-height: 1.32; letter-spacing: -0.005em; color: rgb(251, 247, 240);">Innovative Global Impact is a nonprofit dedicated to reducing poverty through <span data-dc-tpl="40" style="font-style: italic; color: rgb(237, 230, 218);">sustainable economic development</span> — designing programs that expand access to education, entrepreneurship, and opportunity.</p>
-        <p data-dc-tpl="41" style="font-size: clamp(16px, 1.5vw, 18px); line-height: 1.65; color: rgb(179, 167, 148); margin-top: 24px; max-width: 40em;">Capable people are excluded from economic opportunity not for lack of talent, but for lack of access to education, capital, and markets. Traditional aid often meets immediate needs without creating pathways to long-term independence. IGI was created to bridge that gap — prioritizing long-term resilience over short-term aid, and investing in people and locally-driven solutions so communities can build economies that are inclusive, self-sustaining, and owned by those who live within them.</p>
+        <p data-dc-tpl="41" style="font-size: clamp(16px, 1.5vw, 18px); line-height: 1.65; color: rgb(179, 167, 148); margin-top: 24px;">Capable people are excluded from economic opportunity not for lack of talent, but for lack of access to education, capital, and markets. Traditional aid often meets immediate needs without creating pathways to long-term independence. IGI was created to bridge that gap — prioritizing long-term resilience over short-term aid, and investing in people and locally-driven solutions so communities can build economies that are inclusive, self-sustaining, and owned by those who live within them.</p>
       </div>
-      <div style="flex: 1 1 340px; min-width: min(100%, 340px);">
-        <img src="https://innovativeglobalimpact.org/wp-content/uploads/2026/09/Image-7-1024x768.jpeg" alt="Families collecting water together in rural Ghor" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid rgba(237, 230, 218, 0.2); display: block;">
+      <div style="flex: 1 1 420px; min-width: min(100%, 420px);">
+        <img src="https://innovativeglobalimpact.org/wp-content/uploads/2026/09/Image-7-1024x768.jpeg" alt="Families collecting water together in rural Ghor" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid rgb(228, 216, 198); display: block;">
       </div>
     </div>
   </section>
