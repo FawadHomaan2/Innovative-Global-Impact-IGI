@@ -64,6 +64,16 @@ Note: a site filter rewrites `linkedin.com` links in block-list markup
 (displays "Linkedin", drops target/rel). It's the site's own behavior, not a
 markup bug. Raw-HTML links (e.g. the contact-page pills) are unaffected.
 
+Note: some templates/template-parts have been **customized in the Site Editor**,
+which saves a copy in the database (`"source":"custom"`) that **shadows the
+theme file** — edits to the theme `.php`/`.html` then don't appear on the live
+page. If a deployed change to a part/template doesn't show even after a cache
+clear, check `GET /wp-json/wp/v2/template-parts` (or `/templates`) for
+`source:"custom"`; revert with `DELETE /wp-json/wp/v2/template-parts/igi//<slug>`
+(app-password auth) to fall back to the theme file. Known custom so far: the
+`footer` part (reverted 2026-09), and the `page-campaigns` template (still fine
+because it only references the `igi/port-campaigns` pattern).
+
 ## Git workflow
 
 - Develop on the feature branch `claude/wordpress-customization-chqxr9`.
