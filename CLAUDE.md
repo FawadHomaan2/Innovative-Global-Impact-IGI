@@ -70,9 +70,13 @@ theme file** — edits to the theme `.php`/`.html` then don't appear on the live
 page. If a deployed change to a part/template doesn't show even after a cache
 clear, check `GET /wp-json/wp/v2/template-parts` (or `/templates`) for
 `source:"custom"`; revert with `DELETE /wp-json/wp/v2/template-parts/igi//<slug>`
-(app-password auth) to fall back to the theme file. Known custom so far: the
-`footer` part (reverted 2026-09), and the `page-campaigns` template (still fine
-because it only references the `igi/port-campaigns` pattern).
+(app-password auth) to fall back to the theme file. Known custom so far (all
+reverted to theme, 2026-09): the `footer` part, and the `page-campaigns`
+template — the latter had inlined a frozen copy of the campaigns content
+(it did NOT reference the `igi/port-campaigns` pattern), so pattern edits
+silently didn't show until the customization was cleared. Templates live at
+`/wp-json/wp/v2/templates/igi//<slug>`; template-parts at
+`/wp-json/wp/v2/template-parts/igi//<slug>`.
 
 ## Git workflow
 
