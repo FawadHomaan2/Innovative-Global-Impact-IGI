@@ -113,7 +113,7 @@
           <h2 data-dc-tpl="83" data-rev="" style="font-family: Newsreader, serif; font-weight: 400; font-size: clamp(27px, 3.6vw, 44px); line-height: 1.12; letter-spacing: -0.005em; color: rgb(36, 28, 23); max-width: 16em;">We transfer capacity — not handouts — so progress is owned locally and lasts.</h2>
         </div>
         <div style="flex: 1 1 380px; min-width: min(100%, 380px);">
-          <img src="https://innovativeglobalimpact.org/wp-content/uploads/2026/09/equipments-1-1024x577.jpg" alt="A health worker and community elder with locally delivered program equipment in Ghor" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; border: 1px solid rgb(228, 216, 198); display: block;">
+          <img src="https://innovativeglobalimpact.org/wp-content/uploads/2026/09/equipments-2-1024x577.jpg" alt="Locally delivered program equipment handed over to a community partner in Ghor" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; border: 1px solid rgb(228, 216, 198); display: block;">
         </div>
       </div>
       <div data-dc-tpl="84" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(18px, 2vw, 28px); margin-top: clamp(40px, 5vw, 60px);">
