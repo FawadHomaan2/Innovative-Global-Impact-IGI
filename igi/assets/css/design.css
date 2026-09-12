@@ -48,3 +48,12 @@
 		}
 	}
 }
+
+/* CookieYes consent banner — IGI brand accents (overrides plugin default blue) */
+.cky-notice-des a.cky-policy,
+.cky-notice-des button.cky-policy,
+button.cky-show-desc-btn:not(:hover):not(:active),
+.cky-preference-content-wrapper a { color: #241c17 !important; }
+.cky-btn:focus-visible,
+.cky-consent-container a:focus-visible,
+.cky-footer-wrapper a:focus-visible { outline-color: #b7a98f !important; }
