@@ -78,11 +78,5 @@ $igi_year = wp_date( 'Y' );
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
-
-	<!-- Language engine: GTranslate (Google) loads here, hidden and site-wide, so
-	     the header EN / دری switcher can translate every page. -->
-	<!-- wp:html -->
-	<div class="igi-gt-engine notranslate" aria-hidden="true"><?php echo do_shortcode( '[gtranslate]' ); ?></div>
-	<!-- /wp:html -->
 </footer>
 <!-- /wp:group -->
