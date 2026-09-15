@@ -57,3 +57,25 @@ button.cky-show-desc-btn:not(:hover):not(:active),
 .cky-btn:focus-visible,
 .cky-consent-container a:focus-visible,
 .cky-footer-wrapper a:focus-visible { outline-color: #b7a98f !important; }
+
+/* ============ Language switcher + Dari (Persian) support ============ */
+.igi-lang{display:inline-flex;align-items:center;gap:5px;color:inherit;line-height:1;}
+.igi-lang__globe{opacity:.6;flex:0 0 auto;}
+.igi-lang__btn{background:none;border:0;padding:2px 3px;margin:0;cursor:pointer;font-family:"Spline Sans Mono",monospace;font-size:12.5px;letter-spacing:.03em;line-height:1;color:inherit;opacity:.55;transition:opacity .15s;}
+.igi-lang__btn[lang="fa"]{font-size:14px;}
+.igi-lang__btn:hover{opacity:.9;}
+.igi-lang__sep{opacity:.3;font-size:12px;}
+html:not(.igi-lang-fa) .igi-lang__btn[data-lang="en"],
+html.igi-lang-fa .igi-lang__btn[data-lang="fa"]{opacity:1;font-weight:700;}
+
+/* Keep GTranslate's hidden engine and its own floating switcher out of view */
+.igi-gt-engine{position:absolute!important;left:-9999px!important;top:0!important;width:1px!important;height:1px!important;overflow:hidden!important;}
+.gt_float_switcher,[class*="gt_float_switcher"],#google_translate_element{display:none!important;}
+.goog-te-banner-frame,.skiptranslate.goog-te-banner-frame{display:none!important;}
+body{top:0!important;}
+
+/* Dari / Persian: right-to-left layout + Persian web font */
+html.igi-lang-fa body{direction:rtl;text-align:right;font-family:"Vazirmatn",system-ui,sans-serif;}
+html.igi-lang-fa .igi-port *:not(svg):not(path):not(img){font-family:"Vazirmatn",system-ui,sans-serif!important;}
+html.igi-lang-fa .igi-header__inner,html.igi-lang-fa .igi-nav{direction:rtl;}
+html.igi-lang-fa .igi-lang,html.igi-lang-fa .goog-te-combo{direction:ltr;}

@@ -74,6 +74,53 @@ function igi_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'igi_enqueue_assets' );
 
 /**
+ * Multilingual (Dari / Persian) support.
+ *
+ * GTranslate (Google) is the translation engine, loaded hidden site-wide from
+ * the footer pattern. The visible EN / دری toggle lives in the header and calls
+ * igiSetLang(), which sets the googtrans cookie GTranslate reads on reload. This
+ * head script runs before paint so Dari opens right-to-left with a Persian web
+ * font instead of flashing the left-to-right English layout first.
+ */
+function igi_lang_head() {
+	?>
+	<script id="igi-lang-boot">
+	(function(){try{
+		var m=document.cookie.match(/googtrans=\/[a-zA-Z-]+\/([a-zA-Z-]+)/);
+		var cur=(m&&m[1])?m[1].toLowerCase():'en';
+		window.igiCurLang=cur;
+		if(cur==='fa'){
+			var h=document.documentElement;
+			h.setAttribute('dir','rtl');
+			h.classList.add('igi-lang-fa');
+			var l=document.createElement('link');
+			l.rel='stylesheet';
+			l.href='https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap';
+			(document.head||document.documentElement).appendChild(l);
+		}
+	}catch(e){}})();
+	function igiSetLang(lang){
+		try{
+			var host=location.hostname.replace(/^www\./,'');
+			var base='; path=/';
+			if(lang==='en'){
+				var ex='=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+				document.cookie='googtrans'+ex+base;
+				document.cookie='googtrans'+ex+base+'; domain=.'+host;
+			}else{
+				var v='/en/'+lang;
+				document.cookie='googtrans='+v+base;
+				document.cookie='googtrans='+v+base+'; domain=.'+host;
+			}
+		}catch(e){}
+		location.reload();
+	}
+	</script>
+	<?php
+}
+add_action( 'wp_head', 'igi_lang_head', 1 );
+
+/**
  * Editor assets so the canvas matches the front end.
  */
 function igi_editor_assets() {
