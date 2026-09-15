@@ -59,23 +59,43 @@ button.cky-show-desc-btn:not(:hover):not(:active),
 .cky-footer-wrapper a:focus-visible { outline-color: #b7a98f !important; }
 
 /* ============ Language switcher + Dari (Persian) support ============ */
-.igi-lang{display:inline-flex;align-items:center;gap:5px;color:inherit;line-height:1;}
-.igi-lang__globe{opacity:.6;flex:0 0 auto;}
-.igi-lang__btn{background:none;border:0;padding:2px 3px;margin:0;cursor:pointer;font-family:"Spline Sans Mono",monospace;font-size:12.5px;letter-spacing:.03em;line-height:1;color:inherit;opacity:.55;transition:opacity .15s;}
-.igi-lang__btn[lang="fa"]{font-size:14px;}
-.igi-lang__btn:hover{opacity:.9;}
-.igi-lang__sep{opacity:.3;font-size:12px;}
+/* Colours follow --igi-nav, exactly like the nav links: cream over the dark
+   hero, ink once the header turns solid on scroll. */
+.igi-lang{display:inline-flex;align-items:center;gap:6px;line-height:1;color:var(--igi-nav);}
+.igi-lang__globe{opacity:.75;flex:0 0 auto;color:var(--igi-nav);}
+.igi-lang__btn{background:none;border:0;padding:2px 2px;margin:0;cursor:pointer;font-family:var(--wp--preset--font-family--body);font-size:14.5px;letter-spacing:.01em;line-height:1;color:var(--igi-nav);transition:color .2s ease;}
+.igi-lang__btn[data-lang="en"]{font-weight:500;}
+.igi-lang__btn[lang="fa"]{font-weight:700;font-size:15.5px;}
+.igi-lang__sep{color:var(--igi-nav);opacity:.4;font-size:13px;}
+/* active language underlined, matching the current-page nav link */
 html:not(.igi-lang-fa) .igi-lang__btn[data-lang="en"],
-html.igi-lang-fa .igi-lang__btn[data-lang="fa"]{opacity:1;font-weight:700;}
+html.igi-lang-fa .igi-lang__btn[data-lang="fa"]{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px;}
+.igi-lang__btn:hover{text-decoration:underline;text-underline-offset:5px;}
 
-/* Keep GTranslate's hidden engine and its own floating switcher out of view */
-.igi-gt-engine{position:absolute!important;left:-9999px!important;top:0!important;width:1px!important;height:1px!important;overflow:hidden!important;}
+/* GTranslate engine hidden WITHOUT widening the page (no off-screen -9999px);
+   its own floating widget and the Google banner stay off. */
+.igi-gt-engine{position:fixed!important;top:0;left:0;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;opacity:0;pointer-events:none;}
 .gt_float_switcher,[class*="gt_float_switcher"],#google_translate_element{display:none!important;}
 .goog-te-banner-frame,.skiptranslate.goog-te-banner-frame{display:none!important;}
 body{top:0!important;}
 
-/* Dari / Persian: right-to-left layout + Persian web font */
-html.igi-lang-fa body{direction:rtl;text-align:right;font-family:"Vazirmatn",system-ui,sans-serif;}
-html.igi-lang-fa .igi-port *:not(svg):not(path):not(img){font-family:"Vazirmatn",system-ui,sans-serif!important;}
-html.igi-lang-fa .igi-header__inner,html.igi-lang-fa .igi-nav{direction:rtl;}
-html.igi-lang-fa .igi-lang,html.igi-lang-fa .goog-te-combo{direction:ltr;}
+/* No horizontal scrolling on any device */
+html{overflow-x:clip;}
+body{overflow-x:clip;max-width:100%;}
+
+/* Dari / Persian: keep the proven layout, just switch to a proper Persian font.
+   Persian glyphs still read right-to-left within each block via Unicode bidi. */
+html.igi-lang-fa body,
+html.igi-lang-fa .igi-port *:not(svg):not(path):not(img):not(.igi-lang__btn){font-family:"Vazirmatn","Spline Sans Mono",system-ui,sans-serif!important;}
+html.igi-lang-fa .igi-lang{direction:ltr;}
+
+/* Switcher stays compact and on-screen on phones */
+@media (max-width:860px){
+	.igi-header__actions{gap:.7rem;}
+	.igi-lang{gap:4px;}
+	.igi-lang__btn{font-size:13.5px;}
+	.igi-lang__btn[lang="fa"]{font-size:14.5px;}
+}
+@media (max-width:380px){
+	.igi-lang__globe{display:none;}
+}

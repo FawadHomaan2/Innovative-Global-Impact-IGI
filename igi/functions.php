@@ -91,8 +91,8 @@ function igi_lang_head() {
 		window.igiCurLang=cur;
 		if(cur==='fa'){
 			var h=document.documentElement;
-			h.setAttribute('dir','rtl');
 			h.classList.add('igi-lang-fa');
+			h.setAttribute('lang','fa');
 			var l=document.createElement('link');
 			l.rel='stylesheet';
 			l.href='https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap';
@@ -115,6 +115,38 @@ function igi_lang_head() {
 		}catch(e){}
 		location.reload();
 	}
+	/* Hand-corrected Dari for a few headings Google renders awkwardly. Keyed on the
+	   machine output; runs after the async translation and overrides those strings. */
+	(function(){
+		var FIX={
+			"وقتی تولد تبدیل به بقا میشود":"آنجا که تولد، نبرد برای بقاست",
+			"وقتی تولد تبدیل به بقا می‌شود":"آنجا که تولد، نبرد برای بقاست",
+			"جایی که فقر بتدیل به فرصت میشود":"جایی که فقر به فرصت بدل می‌شود",
+			"جایی که فقر تبدیل به فرصت میشود":"جایی که فقر به فرصت بدل می‌شود",
+			"جایی که فقر تبدیل به فرصت می‌شود":"جایی که فقر به فرصت بدل می‌شود",
+			"63 خانواده از آب سالم محروم هستند":"۶۳ خانواده بدون دسترسی به آب سالم",
+			"۶۳ خانواده از آب سالم محروم هستند":"۶۳ خانواده بدون دسترسی به آب سالم"
+		};
+		function apply(){
+			if(window.igiCurLang!=='fa')return;
+			var nodes=document.querySelectorAll('h1,h2,h3,h4,h5,p,span,a,li,strong,em,div');
+			for(var i=0;i<nodes.length;i++){
+				var el=nodes[i];
+				if(el.children&&el.children.length>3)continue;
+				var t=(el.textContent||'').replace(/\s+/g,' ').trim();
+				if(t&&FIX.hasOwnProperty(t)&&el.textContent.trim()!==FIX[t]){el.textContent=FIX[t];}
+			}
+		}
+		document.addEventListener('DOMContentLoaded',function(){
+			if(window.igiCurLang!=='fa')return;
+			var n=0,iv=setInterval(function(){apply();if(++n>12){clearInterval(iv);}},700);
+			try{
+				var mo=new MutationObserver(function(){apply();});
+				mo.observe(document.body,{childList:true,subtree:true,characterData:true});
+				setTimeout(function(){mo.disconnect();},12000);
+			}catch(e){}
+		});
+	})();
 	</script>
 	<?php
 }
