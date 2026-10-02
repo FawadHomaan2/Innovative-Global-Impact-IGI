@@ -218,7 +218,7 @@ body:not(.has-dark-hero) .igi-header .igi-logo__ink,
 	transition: background .15s ease;
 }
 .igi-nav__sublink:hover, .igi-nav__sublink:focus-visible { background: rgba(36,28,23,.06); }
-.igi-nav__sublink.is-current { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px; }
+.igi-nav__sublink.is-current { font-weight: 500; }
 
 /* --- Donate pill — Marigold fill + ink text, never wraps/shrinks. --- */
 .igi-donate {
