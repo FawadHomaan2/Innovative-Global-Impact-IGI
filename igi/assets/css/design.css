@@ -80,3 +80,24 @@ button.cky-show-desc-btn:not(:hover):not(:active),
 .igi-org__connector>span{width:2px;height:clamp(32px,4.5vw,50px);background:rgb(201,188,168);position:relative;}
 .igi-org__connector>span::after{content:"";position:absolute;left:50%;bottom:-1px;transform:translateX(-50%);width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:6px solid rgb(201,188,168);}
 @media (max-width:520px){.igi-org__card{flex:1 1 100%;max-width:340px;}}
+
+/* Org-chart cards are clickable → open a profile modal */
+.igi-org__card{cursor:pointer;}
+.igi-org__card:focus-visible{outline:2px solid rgb(36,28,23);outline-offset:3px;}
+.igi-org__more{margin-top:13px;font-family:"Spline Sans Mono",monospace;font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgb(140,125,106);display:inline-flex;align-items:center;gap:5px;transition:color .15s ease;}
+.igi-org__more::after{content:"\2192";}
+.igi-org__card:hover .igi-org__more,.igi-org__card:focus-visible .igi-org__more{color:rgb(36,28,23);}
+.igi-org__bio{display:none;}
+
+.igi-tmodal{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;}
+.igi-tmodal[hidden]{display:none;}
+.igi-tmodal__backdrop{position:absolute;inset:0;background:rgba(23,18,14,.62);}
+.igi-tmodal__panel{position:relative;z-index:1;width:100%;max-width:560px;max-height:88vh;overflow:auto;background:rgb(250,248,244);border:1px solid rgb(228,216,198);border-radius:18px;padding:clamp(26px,4vw,42px);box-shadow:0 30px 60px -24px rgba(23,18,14,.6);text-align:left;}
+.igi-tmodal__close{position:absolute;top:14px;right:16px;width:36px;height:36px;border:0;background:transparent;font-size:26px;line-height:1;color:rgb(99,90,80);cursor:pointer;border-radius:999px;transition:background .15s,color .15s;}
+.igi-tmodal__close:hover{background:rgba(36,28,23,.07);color:rgb(36,28,23);}
+.igi-tmodal__head{display:flex;align-items:center;gap:18px;margin-bottom:20px;}
+.igi-tmodal__avatar .igi-org__avatar{margin:0;width:84px;height:84px;}
+.igi-tmodal__name{font-family:Newsreader,serif;font-weight:500;font-size:clamp(22px,3vw,28px);line-height:1.1;color:rgb(36,28,23);}
+.igi-tmodal__role{font-family:"Spline Sans Mono",monospace;font-size:12.5px;letter-spacing:.04em;color:rgb(99,90,80);margin-top:7px;}
+.igi-tmodal__bio{font-size:15.5px;line-height:1.68;color:rgb(74,64,54);}
+@media(max-width:520px){.igi-tmodal__head{flex-direction:column;text-align:center;gap:14px;}}
