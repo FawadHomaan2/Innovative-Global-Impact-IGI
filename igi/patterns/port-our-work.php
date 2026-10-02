@@ -24,7 +24,16 @@
 
   
   <section data-dc-tpl="23" style="background: rgb(250, 248, 244); padding: clamp(56px, 7vw, 104px) clamp(20px, 5vw, 56px) clamp(28px, 3vw, 40px);">
-    <div style="max-width:820px;margin:0px auto;text-align:center;"><div style="font-family:&quot;Spline Sans Mono&quot;,monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:rgb(99, 90, 80);margin-bottom:22px;">The approach</div><p style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(24px,2.9vw,38px);line-height:1.32;letter-spacing:-0.005em;color:rgb(36, 28, 23);margin:0;">We focus on <span style="font-style:italic;">transferring capacity</span>, not delivering handouts. Programs are designed to grow income, stability, and long-term resilience through locally-driven solutions.</p><p style="font-size:clamp(16px,1.5vw,18px);line-height:1.6;color:rgb(74, 64, 54);margin-top:22px;max-width:60ch;margin-left:auto;margin-right:auto;">We prioritize dignity, ownership, and accountability in everything we build. Each program is designed to be scalable and adaptable — so a model proven in one place can be replicated across regions and contexts, while staying grounded in local needs.</p></div>
+    <div data-dc-tpl="24" style="max-width: 1180px; margin: 0px auto; display: flex; flex-wrap: wrap; align-items: center; gap: clamp(32px, 5vw, 72px);">
+      <div style="flex: 1 1 420px; min-width: min(100%, 420px);">
+        <div data-dc-tpl="26" style="font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(99, 90, 80); margin-bottom: 22px;">The approach</div>
+        <p data-dc-tpl="28" style="font-family: Newsreader, serif; font-weight: 400; font-size: clamp(24px, 2.9vw, 38px); line-height: 1.32; letter-spacing: -0.005em; color: rgb(36, 28, 23);">We focus on <span data-dc-tpl="29" style="font-style: italic; color: rgb(36, 28, 23);">transferring capacity</span>, not delivering handouts. Programs are designed to grow income, stability, and long-term resilience through locally-driven solutions.</p>
+        <p data-dc-tpl="30" style="font-size: clamp(16px, 1.5vw, 18px); line-height: 1.6; color: rgb(74, 64, 54); margin-top: 22px;">We prioritize dignity, ownership, and accountability in everything we build. Each program is designed to be scalable and adaptable — so a model proven in one place can be replicated across regions and contexts, while staying grounded in local needs.</p>
+      </div>
+      <div style="flex: 1 1 420px; min-width: min(100%, 420px);">
+        <img src="https://innovativeglobalimpact.org/wp-content/uploads/2026/09/equipments-1-1024x577.jpg" alt="A health worker and community elder with locally delivered program equipment in Ghor" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid rgb(228, 216, 198); display: block;">
+      </div>
+    </div>
   </section>
 
   
