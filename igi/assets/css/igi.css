@@ -471,8 +471,17 @@ body.igi-no-givewp .igi-donate__placeholder {
 .igi-footer a:hover { color: #fff; }
 .igi-footer img { max-height: 34px; width: auto; height: auto; }
 .igi-footer .igi-eyebrow { color: var(--wp--preset--color--taupe); }
-.igi-footer__donate { color: var(--wp--preset--color--paper) !important; font-weight: 600; }
-.igi-footer__donate:hover { color: #fff !important; }
+.igi-footer__donate {
+	display: inline-flex; align-items: center; justify-content: center; line-height: 1;
+	font-family: var(--wp--preset--font-family--body); font-size: 13.5px; font-weight: 700;
+	color: var(--wp--preset--color--ink) !important;
+	background: var(--wp--preset--color--paper);
+	padding: 11px 26px; border-radius: 999px; margin-top: 6px;
+	text-decoration: none; white-space: nowrap;
+	transition: background-color .2s ease, color .2s ease;
+}
+.igi-footer__donate:hover,
+.igi-footer__donate:focus-visible { background: var(--wp--preset--color--adobe); color: var(--wp--preset--color--ink) !important; }
 .igi-footer ul.wp-block-list { list-style: none; margin: 0; padding-left: 0; }
 .igi-footer .wp-block-social-links .wp-social-link { background: transparent; }
 .igi-footer .wp-block-social-links a { color: inherit; }
