@@ -55,7 +55,7 @@ $igi_here = isset( $_SERVER['REQUEST_URI'] )
 							<a class="igi-nav__link<?php echo $igi_about_on ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_url ); ?>"<?php echo $igi_current ? ' aria-current="page"' : ''; ?>>About<span class="igi-nav__caret" aria-hidden="true"></span></a>
 							<div class="igi-nav__sub" role="menu" aria-label="About">
 								<a class="igi-nav__sublink<?php echo $igi_current ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_url ); ?>" role="menuitem">About IGI</a>
-								<a class="igi-nav__sublink<?php echo $igi_team_cur ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_team_url ); ?>" role="menuitem"<?php echo $igi_team_cur ? ' aria-current="page"' : ''; ?>>Team</a>
+								<a class="igi-nav__sublink<?php echo $igi_team_cur ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_team_url ); ?>" role="menuitem"<?php echo $igi_team_cur ? ' aria-current="page"' : ''; ?>>Our Team</a>
 							</div>
 						</div>
 					<?php else : ?>
