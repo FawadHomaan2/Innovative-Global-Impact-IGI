@@ -188,6 +188,38 @@ body:not(.has-dark-hero) .igi-header .igi-logo__ink,
 /* Active page link — underlined + heavier, in both header states (colour follows --igi-nav). */
 .igi-nav__link.is-current { color: var(--igi-nav); font-weight: 600; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1.5px; }
 
+/* --- About dropdown (sub-menu) ---
+   Desktop: reveals a paper panel on hover / keyboard focus-within. Mobile: the
+   sub-links sit indented inside the dark nav panel (see the media query below). */
+.igi-nav__item--has-sub { position: relative; display: inline-flex; align-items: center; }
+.igi-nav__item--has-sub > .igi-nav__link { display: inline-flex; align-items: center; }
+.igi-nav__caret {
+	display: inline-block; width: 0; height: 0; margin-left: 6px;
+	border-left: 4px solid transparent; border-right: 4px solid transparent;
+	border-top: 5px solid currentColor; opacity: .75; transition: transform .2s ease;
+}
+.igi-nav__item--has-sub:hover .igi-nav__caret,
+.igi-nav__item--has-sub:focus-within .igi-nav__caret { transform: rotate(180deg); }
+.igi-nav__sub {
+	position: absolute; top: 100%; left: 0; min-width: 190px; margin-top: 12px;
+	display: none; flex-direction: column; padding: 8px; z-index: 120;
+	background: var(--wp--preset--color--paper);
+	border: 1px solid var(--wp--preset--color--adobe); border-radius: 12px;
+	box-shadow: 0 20px 36px -22px rgba(36,28,23,.5);
+}
+/* invisible bridge so the panel doesn't close while the cursor crosses the gap */
+.igi-nav__sub::before { content: ""; position: absolute; top: -12px; left: 0; right: 0; height: 12px; }
+.igi-nav__item--has-sub:hover > .igi-nav__sub,
+.igi-nav__item--has-sub:focus-within > .igi-nav__sub { display: flex; }
+.igi-nav__sublink {
+	display: block; padding: 9px 12px; border-radius: 8px;
+	font-family: var(--wp--preset--font-family--body); font-size: 14.5px; font-weight: 500;
+	color: var(--wp--preset--color--ink); white-space: nowrap; text-decoration: none;
+	transition: background .15s ease;
+}
+.igi-nav__sublink:hover, .igi-nav__sublink:focus-visible { background: rgba(36,28,23,.06); }
+.igi-nav__sublink.is-current { font-weight: 700; }
+
 /* --- Donate pill — Marigold fill + ink text, never wraps/shrinks. --- */
 .igi-donate {
 	display: inline-flex; align-items: center; justify-content: center; line-height: 1;
@@ -237,6 +269,20 @@ body:not(.has-dark-hero) .igi-header .igi-logo__ink,
 		padding-block: 1.05rem;
 		border-top: 1px solid rgba(228,216,198,0.14);
 	}
+	/* About dropdown collapses to indented links inside the dark panel */
+	.igi-nav__item--has-sub { display: block; }
+	.igi-nav__item--has-sub > .igi-nav__link { display: block; }
+	.igi-nav__caret { display: none; }
+	.igi-nav__sub {
+		position: static; display: flex; margin: 0; padding: 0 0 0 16px;
+		background: transparent; border: 0; border-radius: 0; box-shadow: none;
+	}
+	.igi-nav__sublink {
+		color: var(--wp--preset--color--paper); font-size: 1rem;
+		padding: .85rem 0; border-radius: 0;
+		border-top: 1px solid rgba(228,216,198,0.14);
+	}
+	.igi-nav__sublink:hover, .igi-nav__sublink:focus-visible { background: transparent; text-decoration: underline; }
 	/* While the panel is open keep the bar dark and the wordmark white, even if
 	   the page was scrolled and the header had turned solid. */
 	.igi-header.is-menu-open {

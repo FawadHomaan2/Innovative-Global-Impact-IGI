@@ -44,8 +44,23 @@ $igi_here = isset( $_SERVER['REQUEST_URI'] )
 				foreach ( $igi_nav as $igi_label => $igi_url ) :
 					$igi_path    = trailingslashit( (string) wp_parse_url( $igi_url, PHP_URL_PATH ) );
 					$igi_current = ( '' !== $igi_here && $igi_path === $igi_here );
-					?>
-					<a class="igi-nav__link<?php echo $igi_current ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_url ); ?>"<?php echo $igi_current ? ' aria-current="page"' : ''; ?>><?php echo esc_html( $igi_label ); ?></a>
+
+					if ( 'About' === $igi_label ) :
+						$igi_team_url  = home_url( '/team/' );
+						$igi_team_path = trailingslashit( (string) wp_parse_url( $igi_team_url, PHP_URL_PATH ) );
+						$igi_team_cur  = ( '' !== $igi_here && $igi_team_path === $igi_here );
+						$igi_about_on  = $igi_current || $igi_team_cur;
+						?>
+						<div class="igi-nav__item igi-nav__item--has-sub">
+							<a class="igi-nav__link<?php echo $igi_about_on ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_url ); ?>"<?php echo $igi_current ? ' aria-current="page"' : ''; ?>>About<span class="igi-nav__caret" aria-hidden="true"></span></a>
+							<div class="igi-nav__sub" role="menu" aria-label="About">
+								<a class="igi-nav__sublink<?php echo $igi_current ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_url ); ?>" role="menuitem">About IGI</a>
+								<a class="igi-nav__sublink<?php echo $igi_team_cur ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_team_url ); ?>" role="menuitem"<?php echo $igi_team_cur ? ' aria-current="page"' : ''; ?>>Team</a>
+							</div>
+						</div>
+					<?php else : ?>
+						<a class="igi-nav__link<?php echo $igi_current ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_url ); ?>"<?php echo $igi_current ? ' aria-current="page"' : ''; ?>><?php echo esc_html( $igi_label ); ?></a>
+					<?php endif; ?>
 				<?php endforeach; ?>
 			</nav>
 

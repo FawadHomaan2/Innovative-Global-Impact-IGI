@@ -57,3 +57,26 @@ button.cky-show-desc-btn:not(:hover):not(:active),
 .cky-btn:focus-visible,
 .cky-consent-container a:focus-visible,
 .cky-footer-wrapper a:focus-visible { outline-color: #b7a98f !important; }
+
+/* ============ Organizational chart — Team page ============ */
+.igi-org{max-width:1140px;margin:0 auto;padding:0 clamp(16px,4vw,32px);}
+.igi-org__intro{text-align:center;max-width:46em;margin:0 auto clamp(42px,5vw,64px);}
+.igi-org__eyebrow{font-family:"Spline Sans Mono",monospace;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:rgb(140,125,106);margin-bottom:16px;}
+.igi-org__title{font-family:Newsreader,serif;font-weight:400;font-size:clamp(30px,4.4vw,50px);line-height:1.06;letter-spacing:-.01em;color:rgb(36,28,23);margin-bottom:14px;}
+.igi-org__lead{font-size:clamp(15px,1.5vw,17px);line-height:1.6;color:rgb(74,64,54);}
+.igi-org__label{text-align:center;font-family:"Spline Sans Mono",monospace;font-size:12.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgb(140,125,106);margin:0 0 26px;}
+.igi-org__row{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(16px,2vw,24px);}
+.igi-org__row--board{max-width:620px;margin:0 auto;}
+.igi-org__grid{max-width:1000px;margin:0 auto;}
+.igi-org__card{flex:1 1 220px;max-width:270px;background:#fff;border:1px solid rgb(228,216,198);border-radius:16px;padding:clamp(22px,2.4vw,30px) clamp(16px,2vw,22px);box-shadow:0 1px 2px rgba(36,28,23,.05);display:flex;flex-direction:column;align-items:center;text-align:center;transition:box-shadow .22s ease,transform .22s ease;}
+.igi-org__card:hover{box-shadow:0 18px 32px -20px rgba(36,28,23,.38);transform:translateY(-3px);}
+.igi-org__avatar{width:94px;height:94px;border-radius:999px;overflow:hidden;margin-bottom:16px;border:3px solid #fff;box-shadow:0 0 0 1px rgb(228,216,198);background:rgb(237,230,218);flex:0 0 auto;}
+.igi-org__avatar img{width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;}
+.igi-org__avatar--mono{display:flex;align-items:center;justify-content:center;background:linear-gradient(155deg,rgb(237,230,218),rgb(224,212,193));}
+.igi-org__avatar--mono>span{font-family:Newsreader,serif;font-weight:500;font-size:30px;color:rgb(99,90,80);letter-spacing:.03em;}
+.igi-org__name{font-family:var(--wp--preset--font-family--body,"Hanken Grotesk",system-ui,sans-serif);font-weight:700;font-size:18px;line-height:1.25;color:rgb(36,28,23);margin-bottom:6px;}
+.igi-org__role{font-family:var(--wp--preset--font-family--body,"Hanken Grotesk",system-ui,sans-serif);font-size:13.75px;line-height:1.45;color:rgb(99,90,80);}
+.igi-org__connector{display:flex;justify-content:center;align-items:center;margin:clamp(14px,2vw,22px) 0 clamp(26px,3vw,34px);}
+.igi-org__connector>span{width:2px;height:clamp(32px,4.5vw,50px);background:rgb(201,188,168);position:relative;}
+.igi-org__connector>span::after{content:"";position:absolute;left:50%;bottom:-1px;transform:translateX(-50%);width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:6px solid rgb(201,188,168);}
+@media (max-width:520px){.igi-org__card{flex:1 1 100%;max-width:340px;}}
