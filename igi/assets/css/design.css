@@ -88,6 +88,10 @@ button.cky-show-desc-btn:not(:hover):not(:active),
 .page-id-818 .igi-section{padding-top:0;}
 .page-id-818 .igi-orgband{padding-top:clamp(24px,3vw,40px) !important;}
 
+/* Vacancies page (page-id-848): the content band carries its own padding, so
+   drop the template section's top padding to avoid a doubled gap under the hero. */
+.page-id-848 .igi-section{padding-top:0;}
+
 /* Org-chart cards are clickable → open a profile modal */
 .igi-org__card{cursor:pointer;}
 .igi-org__card:focus-visible{outline:2px solid rgb(36,28,23);outline-offset:3px;}
