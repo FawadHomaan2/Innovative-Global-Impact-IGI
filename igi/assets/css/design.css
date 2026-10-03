@@ -81,6 +81,13 @@ button.cky-show-desc-btn:not(:hover):not(:active),
 .igi-org__connector>span::after{content:"";position:absolute;left:50%;bottom:-1px;transform:translateX(-50%);width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:6px solid rgb(201,188,168);}
 @media (max-width:520px){.igi-org__card{flex:1 1 100%;max-width:340px;}}
 
+/* Team page (page-id-818): drop the large empty gap between the hero and the
+   org chart. The page template wraps the content in .igi-section (top padding
+   clamp(4.5rem,9vw,9rem)), which stacks on top of the org band's own
+   padding-top — remove the template padding and keep one modest gap. */
+.page-id-818 .igi-section{padding-top:0;}
+.page-id-818 .igi-orgband{padding-top:clamp(24px,3vw,40px) !important;}
+
 /* Org-chart cards are clickable → open a profile modal */
 .igi-org__card{cursor:pointer;}
 .igi-org__card:focus-visible{outline:2px solid rgb(36,28,23);outline-offset:3px;}
