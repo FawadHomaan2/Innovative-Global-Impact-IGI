@@ -29,7 +29,7 @@
 
   
   <!-- CAMPAIGNS SHOWCASE -->
-  <section style="background: rgb(250, 248, 244); padding: clamp(56px, 7vw, 100px) clamp(20px, 5vw, 56px);">
+  <section style="background: rgb(250, 248, 244); padding: clamp(56px, 7vw, 100px) clamp(20px, 5vw, 56px) clamp(24px, 3vw, 40px);">
     <div style="max-width: 1280px; margin: 0 auto;">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: clamp(28px, 3.4vw, 48px);">
         <div>
@@ -78,7 +78,7 @@
   </section>
 
 
-  <section data-dc-tpl="27" style="background: rgb(250, 248, 244); padding: clamp(60px, 8vw, 120px) clamp(20px, 5vw, 56px);">
+  <section data-dc-tpl="27" style="background: rgb(250, 248, 244); padding: clamp(28px, 3.5vw, 48px) clamp(20px, 5vw, 56px) clamp(60px, 8vw, 120px);">
     <div data-dc-tpl="28" style="max-width: 1180px; margin: 0px auto; display: flex; flex-wrap: wrap; align-items: center; gap: clamp(32px, 5vw, 72px);">
       <div style="flex: 1 1 420px; min-width: min(100%, 420px);">
         <div data-dc-tpl="30" style="font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(99, 90, 80); margin-bottom: 22px;">Why we exist</div>

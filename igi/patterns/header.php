@@ -18,7 +18,6 @@ $igi_home = home_url( '/' );
 $igi_nav = array(
 	'About'     => home_url( '/about/' ),
 	'Our Work'  => home_url( '/our-work/' ),
-	'Donate'    => home_url( '/donate/' ),
 	'News'      => home_url( '/news/' ),
 	'Contact'   => home_url( '/contact/' ),
 );
