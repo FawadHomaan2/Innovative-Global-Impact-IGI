@@ -55,7 +55,7 @@
         <div data-dc-tpl="53" style="margin-top: 18px; background: rgb(228, 216, 198); border-radius: 6px; padding: clamp(22px, 2.5vw, 30px);">
           <div data-dc-tpl="54" style="font-family: Newsreader, serif; font-size: 21px; line-height: 1.2; color: rgb(36, 28, 23); margin-bottom: 6px;">Want to fund a pilot?</div>
           <p data-dc-tpl="55" style="font-size: 14.5px; line-height: 1.5; color: rgb(90, 80, 68); margin-bottom: 16px;">Donations are open-ended — give to any campaign, any amount.</p>
-          <a data-dc-tpl="56" href="/campaigns/" class="scp9" style="display: inline-block; font-size: 14px; font-weight: 700; color: rgb(250, 248, 244); background: rgb(36, 28, 23); padding: 12px 24px; border-radius: 999px; text-decoration: none;">See campaigns</a>
+          <a data-dc-tpl="56" href="/donate/" class="scp9" style="display: inline-block; font-size: 14px; font-weight: 700; color: rgb(250, 248, 244); background: rgb(36, 28, 23); padding: 12px 24px; border-radius: 999px; text-decoration: none;">See campaigns</a>
         </div>
       </div>
 

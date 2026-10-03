@@ -321,7 +321,7 @@ function igi_donate( $args = array() ) {
 	) );
 	$style = $args['style'] ? ' is-style-' . sanitize_html_class( $args['style'] ) : '';
 	$label = esc_html( $args['label'] );
-	$href  = esc_url( home_url( '/campaigns/' ) . ( $args['anchor'] ? '#' . sanitize_title( $args['anchor'] ) : '' ) );
+	$href  = esc_url( home_url( '/donate/' ) . ( $args['anchor'] ? '#' . sanitize_title( $args['anchor'] ) : '' ) );
 
 	ob_start();
 	?>
@@ -347,3 +347,20 @@ function igi_donate( $args = array() ) {
 	<?php
 	return trim( ob_get_clean() );
 }
+
+/**
+ * Permanent redirect for the retired /campaigns/ URL → the new /donate/ page.
+ * The campaigns page was merged into the Donate page (2026-10); keep old
+ * bookmarks and external links working instead of 404ing.
+ */
+function igi_redirect_campaigns() {
+	if ( is_admin() ) {
+		return;
+	}
+	$path = isset( $_SERVER['REQUEST_URI'] ) ? wp_parse_url( wp_unslash( $_SERVER['REQUEST_URI'] ), PHP_URL_PATH ) : '';
+	if ( '' !== (string) $path && 0 === strpos( trailingslashit( (string) $path ), '/campaigns/' ) ) {
+		wp_safe_redirect( home_url( '/donate/' ), 301 );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'igi_redirect_campaigns', 1 );

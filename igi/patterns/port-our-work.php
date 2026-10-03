@@ -107,7 +107,7 @@
       <div data-dc-tpl="149" style="max-width: 1280px; margin: 0px auto; width: 100%; padding: 0px clamp(20px, 5vw, 56px);">
         <div data-dc-tpl="150" style="max-width: 30em;">
           <h2 data-dc-tpl="151" style="font-family: Newsreader, serif; font-weight: 400; font-size: clamp(28px, 3.8vw, 46px); line-height: 1.06; color: rgb(251, 247, 240);">Help build the proof.</h2>
-          <a <?php echo igi_give_attr('general'); ?> data-dc-tpl="152" href="/campaigns/" class="igi-give-trigger scp0" style="display: inline-block; margin-top: 24px; font-size: 15px; font-weight: 700; color: rgb(36, 28, 23); background: rgb(250, 248, 244); padding: 16px 32px; border-radius: 999px; text-decoration: none;">Support a pilot</a>
+          <a <?php echo igi_give_attr('general'); ?> data-dc-tpl="152" href="/donate/" class="igi-give-trigger scp0" style="display: inline-block; margin-top: 24px; font-size: 15px; font-weight: 700; color: rgb(36, 28, 23); background: rgb(250, 248, 244); padding: 16px 32px; border-radius: 999px; text-decoration: none;">Support a pilot</a>
         </div>
       </div>
     </div>

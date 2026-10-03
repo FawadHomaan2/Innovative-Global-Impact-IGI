@@ -33,7 +33,7 @@ $igi_year = wp_date( 'Y' );
 			<ul class="wp-block-list" style="line-height:2">
 				<!-- wp:list-item --><li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">About</a></li><!-- /wp:list-item -->
 				<!-- wp:list-item --><li><a href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>">Our Work</a></li><!-- /wp:list-item -->
-				<!-- wp:list-item --><li><a href="<?php echo esc_url( home_url( '/campaigns/' ) ); ?>">Campaigns</a></li><!-- /wp:list-item -->
+				<!-- wp:list-item --><li><a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>">Donate</a></li><!-- /wp:list-item -->
 				<!-- wp:list-item --><li><a href="<?php echo esc_url( home_url( '/news/' ) ); ?>">News</a></li><!-- /wp:list-item -->
 				<!-- wp:list-item --><li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Contact</a></li><!-- /wp:list-item -->
 			</ul>
@@ -55,7 +55,7 @@ $igi_year = wp_date( 'Y' );
 				
 				
 				
-				<!-- wp:list-item --><li><a <?php echo igi_give_attr( 'general' ); ?> class="igi-give-trigger igi-footer__donate" href="<?php echo esc_url( home_url( '/campaigns/' ) ); ?>">Donate</a></li><!-- /wp:list-item -->
+				<!-- wp:list-item --><li><a <?php echo igi_give_attr( 'general' ); ?> class="igi-give-trigger igi-footer__donate" href="<?php echo esc_url( home_url( '/donate/' ) ); ?>">Donate</a></li><!-- /wp:list-item -->
 			</ul>
 			<!-- /wp:list -->
 		</div>

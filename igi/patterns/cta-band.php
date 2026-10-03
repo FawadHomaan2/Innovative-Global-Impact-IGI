@@ -31,7 +31,7 @@ $igi_img = get_template_directory_uri() . '/assets/images/ghor-water-jerrycans-c
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button -->
-				<div class="wp-block-button"><a <?php echo igi_give_attr( 'general' ); ?> class="igi-give-trigger wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/campaigns/' ) ); ?>">Donate now</a></div>
+				<div class="wp-block-button"><a <?php echo igi_give_attr( 'general' ); ?> class="igi-give-trigger wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/donate/' ) ); ?>">Donate now</a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

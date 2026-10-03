@@ -26,7 +26,7 @@ $igi_img = get_template_directory_uri() . '/assets/images/ghor-landscape-village
 		<!-- wp:buttons {"style":{"spacing":{"blockGap":"0.85rem","margin":{"top":"0.5rem"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
 		<div class="wp-block-buttons" style="margin-top:0.5rem">
 			<!-- wp:button -->
-			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/campaigns/' ) ); ?>">Donate</a></div>
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/donate/' ) ); ?>">Donate</a></div>
 			<!-- /wp:button -->
 			<!-- wp:button {"className":"is-style-igi-ghost"} -->
 			<div class="wp-block-button is-style-igi-ghost"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>">See our work</a></div>

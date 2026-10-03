@@ -90,7 +90,7 @@
         <div data-dc-tpl="89" style="max-width: 30em;">
           <h2 data-dc-tpl="90" style="font-family: Newsreader, serif; font-weight: 400; font-size: clamp(28px, 3.8vw, 46px); line-height: 1.06; color: rgb(251, 247, 240);">See the proofs we're building.</h2>
           <div data-dc-tpl="91" style="display: flex; flex-wrap: wrap; gap: 13px; margin-top: 26px;">
-            <a data-dc-tpl="92" href="/campaigns/" class="scp0" style="font-size: 15px; font-weight: 700; color: rgb(36, 28, 23); background: rgb(250, 248, 244); padding: 15px 30px; border-radius: 999px; text-decoration: none;">See the campaigns</a>
+            <a data-dc-tpl="92" href="/donate/" class="scp0" style="font-size: 15px; font-weight: 700; color: rgb(36, 28, 23); background: rgb(250, 248, 244); padding: 15px 30px; border-radius: 999px; text-decoration: none;">See the campaigns</a>
             <a data-dc-tpl="93" href="/our-work/" class="scp1" style="font-size: 15px; font-weight: 600; color: rgb(237, 230, 218); background: rgba(250, 248, 244, 0.05); border: 1.5px solid rgba(237, 230, 218, 0.45); padding: 13.5px 28px; border-radius: 999px; text-decoration: none;">Our work &amp; impact</a>
           </div>
         </div>

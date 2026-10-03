@@ -64,7 +64,7 @@
       <div data-dc-tpl="46" style="max-width: 1280px; margin: 0px auto; width: 100%; padding: 0px clamp(20px, 5vw, 56px);">
         <div data-dc-tpl="47" style="max-width: 28em;">
           <h2 data-dc-tpl="48" style="font-family: Newsreader, serif; font-weight: 400; font-size: clamp(26px, 3.6vw, 44px); line-height: 1.06; color: rgb(251, 247, 240);">Help build the Ghor pilot.</h2>
-          <a <?php echo igi_give_attr('ghor'); ?> data-dc-tpl="49" href="/campaigns/" class="igi-give-trigger scp0" style="display: inline-block; margin-top: 24px; font-size: 15px; font-weight: 700; color: rgb(36, 28, 23); background: rgb(250, 248, 244); padding: 15px 30px; border-radius: 999px; text-decoration: none;">Donate to a pilot</a>
+          <a <?php echo igi_give_attr('ghor'); ?> data-dc-tpl="49" href="/donate/" class="igi-give-trigger scp0" style="display: inline-block; margin-top: 24px; font-size: 15px; font-weight: 700; color: rgb(36, 28, 23); background: rgb(250, 248, 244); padding: 15px 30px; border-radius: 999px; text-decoration: none;">Donate to a pilot</a>
         </div>
       </div>
     </div>

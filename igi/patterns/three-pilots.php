@@ -6,7 +6,7 @@
  * Description: The three Afghanistan pilots on a dark photographic band.
  */
 $igi_img = get_template_directory_uri() . '/assets/images/ghor-water-families-waiting.jpg';
-$igi_camp = home_url( '/campaigns/' );
+$igi_camp = home_url( '/donate/' );
 ?>
 <!-- wp:cover {"url":"<?php echo esc_url( $igi_img ); ?>","dimRatio":80,"overlayColor":"ink","isUserOverlayColor":true,"contentPosition":"center center","align":"full","className":"igi-flagship igi-on-dark","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}}} -->
 <div class="wp-block-cover alignfull igi-flagship igi-on-dark" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)"><span aria-hidden="true" class="wp-block-cover__background has-ink-background-color has-background-dim-80 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( $igi_img ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">

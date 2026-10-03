@@ -18,7 +18,7 @@ $igi_home = home_url( '/' );
 $igi_nav = array(
 	'About'     => home_url( '/about/' ),
 	'Our Work'  => home_url( '/our-work/' ),
-	'Campaigns' => home_url( '/campaigns/' ),
+	'Donate'    => home_url( '/donate/' ),
 	'News'      => home_url( '/news/' ),
 	'Contact'   => home_url( '/contact/' ),
 );
@@ -65,7 +65,7 @@ $igi_here = isset( $_SERVER['REQUEST_URI'] )
 			</nav>
 
 			<div class="igi-header__actions">
-				<a <?php echo igi_give_attr( 'general' ); ?> class="igi-give-trigger igi-donate" href="<?php echo esc_url( home_url( '/campaigns/' ) ); ?>">Donate</a>
+				<a <?php echo igi_give_attr( 'general' ); ?> class="igi-give-trigger igi-donate" href="<?php echo esc_url( home_url( '/donate/' ) ); ?>">Donate</a>
 				<button type="button" class="igi-menu-toggle" aria-controls="igi-nav" aria-expanded="false" aria-label="Open menu">
 					<span class="igi-menu-toggle__bars" aria-hidden="true"></span>
 				</button>
