@@ -42,17 +42,7 @@
   </section>
 
   
-  <!-- Impact stats band -->
-  <section style="background: rgb(23, 18, 14); padding: clamp(48px, 6vw, 84px) clamp(20px, 5vw, 56px);">
-    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: clamp(24px, 3vw, 44px);">
-      <div style="border-top: 2px solid rgba(201, 188, 168, 0.4); padding-top: 18px;"><div style="font-family: Newsreader, serif; font-size: clamp(40px, 5vw, 60px); line-height: 1; color: rgb(251, 247, 240);">3</div><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(179, 167, 148); margin-top: 12px;">Flagship pilots</div></div>
-      <div style="border-top: 2px solid rgba(201, 188, 168, 0.4); padding-top: 18px;"><div style="font-family: Newsreader, serif; font-size: clamp(40px, 5vw, 60px); line-height: 1; color: rgb(251, 247, 240);">63</div><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(179, 167, 148); margin-top: 12px;">Families in the water pilot</div></div>
-      <div style="border-top: 2px solid rgba(201, 188, 168, 0.4); padding-top: 18px;"><div style="font-family: Newsreader, serif; font-size: clamp(40px, 5vw, 60px); line-height: 1; color: rgb(251, 247, 240);">$38K</div><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(179, 167, 148); margin-top: 12px;">To fund all three pilots</div></div>
-      <div style="border-top: 2px solid rgba(201, 188, 168, 0.4); padding-top: 18px;"><div style="font-family: Newsreader, serif; font-size: clamp(40px, 5vw, 60px); line-height: 1; color: rgb(251, 247, 240);">100%</div><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(179, 167, 148); margin-top: 12px;">Locally led &amp; delivered</div></div>
-    </div>
-  </section>
-
-  <section data-dc-tpl="35" style="background: rgb(250, 248, 244); padding: clamp(20px, 2vw, 36px) clamp(20px, 5vw, 56px) clamp(60px, 8vw, 110px);">
+<section data-dc-tpl="35" style="background: rgb(250, 248, 244); padding: clamp(20px, 2vw, 36px) clamp(20px, 5vw, 56px) clamp(60px, 8vw, 110px);">
     <div data-dc-tpl="36" style="max-width: 1280px; margin: 0px auto;">
       <div data-dc-tpl="37" style="border-top: 1px solid rgb(228, 216, 198); padding-top: clamp(36px, 4vw, 56px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: clamp(32px, 4vw, 52px);">
         <div data-dc-tpl="38">
@@ -160,6 +150,16 @@
         <button data-dc-tpl="124" type="submit" class="scp9" style="flex: 0 0 auto; font-size: 15px; font-weight: 700; color: rgb(250, 248, 244); background: rgb(36, 28, 23); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 15px 28px; border-radius: 999px; cursor: pointer;">Subscribe</button>
         
       </form>
+    </div>
+  </section>
+
+  <!-- Impact stats band -->
+  <section style="background: rgb(23, 18, 14); padding: clamp(48px, 6vw, 84px) clamp(20px, 5vw, 56px);">
+    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: clamp(24px, 3vw, 44px);">
+      <div style="border-top: 2px solid rgba(201, 188, 168, 0.4); padding-top: 18px;"><div style="font-family: Newsreader, serif; font-size: clamp(40px, 5vw, 60px); line-height: 1; color: rgb(251, 247, 240);">3</div><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(179, 167, 148); margin-top: 12px;">Flagship pilots</div></div>
+      <div style="border-top: 2px solid rgba(201, 188, 168, 0.4); padding-top: 18px;"><div style="font-family: Newsreader, serif; font-size: clamp(40px, 5vw, 60px); line-height: 1; color: rgb(251, 247, 240);">63</div><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(179, 167, 148); margin-top: 12px;">Families in the water pilot</div></div>
+      <div style="border-top: 2px solid rgba(201, 188, 168, 0.4); padding-top: 18px;"><div style="font-family: Newsreader, serif; font-size: clamp(40px, 5vw, 60px); line-height: 1; color: rgb(251, 247, 240);">$38K</div><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(179, 167, 148); margin-top: 12px;">To fund all three pilots</div></div>
+      <div style="border-top: 2px solid rgba(201, 188, 168, 0.4); padding-top: 18px;"><div style="font-family: Newsreader, serif; font-size: clamp(40px, 5vw, 60px); line-height: 1; color: rgb(251, 247, 240);">100%</div><div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(179, 167, 148); margin-top: 12px;">Locally led &amp; delivered</div></div>
     </div>
   </section>
 
