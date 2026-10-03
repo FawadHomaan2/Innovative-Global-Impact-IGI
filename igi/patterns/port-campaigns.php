@@ -33,9 +33,30 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
     </div>
   </section>
 
-  <!-- THREE CARDS -->
+  <!-- DONATE CARDS -->
   <section style="background: rgb(250, 248, 244); padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 56px) clamp(64px, 8vw, 104px);">
     <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: clamp(20px, 2.4vw, 30px); align-items: start;">
+
+      <!-- GENERAL FUND · ALL PILOTS -->
+      <div data-rev style="display: flex; flex-direction: column; background: #fff; border: 1px solid rgb(228, 216, 198); border-radius: 8px; overflow: hidden;">
+        <div style="position: relative; aspect-ratio: 4/3; overflow: hidden;">
+          <img src="https://innovativeglobalimpact.org/wp-content/uploads/2026/09/delivering-equipments-880x620.jpg" alt="IGI delivering program equipment and supplies to a community in Afghanistan" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: rgb(36, 28, 23);"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; flex: 1; padding: clamp(24px, 2.2vw, 32px);">
+          <div style="font-family: 'Spline Sans Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(99, 90, 80); margin-bottom: 14px;">General fund · All pilots</div>
+          <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(25px, 2.3vw, 31px); line-height: 1.1; letter-spacing: -0.01em; color: rgb(36, 28, 23);">Give where it's <span style="font-style: italic; color: rgb(36, 28, 23);">needed most</span></h2>
+          <p style="font-size: 16px; line-height: 1.6; color: rgb(74, 64, 54); margin-top: 14px;">Not sure which to choose? Give to IGI's general fund and we'll direct your gift to the pilot that needs it most — clean water, newborn survival, or women's livelihoods.</p>
+          <div class="igi-camp-panel" id="igi-camp-panel-3" style="border-left: 3px solid rgb(36, 28, 23); padding-left: 16px;">
+            <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">A general gift gives IGI the flexibility to move fast — covering the pilot closest to its goal, responding to an urgent need, or seeding the next locally-run project. Every dollar stays with the work, and we report back on where it went.</p>
+          </div>
+          <div style="flex: 1;"></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px;">
+            <a <?php echo igi_give_attr( 'general' ); // phpcs:ignore ?> href="#" class="igi-give-trigger scp9" style="flex: 1 1 auto; text-align: center; font-size: 15px; font-weight: 700; color: rgb(250, 248, 244); background: rgb(36, 28, 23); padding: 14px 24px; border-radius: 999px; text-decoration: none;">Donate now</a>
+            <button type="button" class="igi-camp-toggle scpa" aria-expanded="false" aria-controls="igi-camp-panel-3" style="flex: 0 0 auto; font-family: 'Hanken Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: rgb(36, 28, 23); background: transparent; border: 1.5px solid rgb(201, 188, 168); padding: 12.5px 20px; border-radius: 999px; cursor: pointer;">More details</button>
+          </div>
+        </div>
+      </div>
 
       <!-- WATER · GHOR -->
       <div data-rev style="display: flex; flex-direction: column; background: #fff; border: 1px solid rgb(228, 216, 198); border-radius: 8px; overflow: hidden;">
@@ -99,27 +120,6 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
           <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px;">
             <a <?php echo igi_give_attr( 'daykundi' ); // phpcs:ignore ?> href="#" class="igi-give-trigger scp9" style="flex: 1 1 auto; text-align: center; font-size: 15px; font-weight: 700; color: rgb(250, 248, 244); background: rgb(36, 28, 23); padding: 14px 24px; border-radius: 999px; text-decoration: none;">Donate now</a>
             <button type="button" class="igi-camp-toggle scpa" aria-expanded="false" aria-controls="igi-camp-panel-2" style="flex: 0 0 auto; font-family: 'Hanken Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: rgb(36, 28, 23); background: transparent; border: 1.5px solid rgb(201, 188, 168); padding: 12.5px 20px; border-radius: 999px; cursor: pointer;">More details</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- GENERAL FUND · ALL PILOTS -->
-      <div data-rev style="display: flex; flex-direction: column; background: #fff; border: 1px solid rgb(228, 216, 198); border-radius: 8px; overflow: hidden;">
-        <div style="position: relative; aspect-ratio: 4/3; overflow: hidden;">
-          <img src="<?php echo esc_url( $igi_uri . 'ghor-water-children-line.jpg' ); ?>" alt="Children lined up beside long rows of water containers along a mud-brick wall in Ghor" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: rgb(36, 28, 23);"></div>
-        </div>
-        <div style="display: flex; flex-direction: column; flex: 1; padding: clamp(24px, 2.2vw, 32px);">
-          <div style="font-family: 'Spline Sans Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(99, 90, 80); margin-bottom: 14px;">General fund · All pilots</div>
-          <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(25px, 2.3vw, 31px); line-height: 1.1; letter-spacing: -0.01em; color: rgb(36, 28, 23);">Give where it's <span style="font-style: italic; color: rgb(36, 28, 23);">needed most</span></h2>
-          <p style="font-size: 16px; line-height: 1.6; color: rgb(74, 64, 54); margin-top: 14px;">Not sure which to choose? Give to IGI's general fund and we'll direct your gift to the pilot that needs it most — clean water, newborn survival, or women's livelihoods.</p>
-          <div class="igi-camp-panel" id="igi-camp-panel-3" style="border-left: 3px solid rgb(36, 28, 23); padding-left: 16px;">
-            <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">A general gift gives IGI the flexibility to move fast — covering the pilot closest to its goal, responding to an urgent need, or seeding the next locally-run project. Every dollar stays with the work, and we report back on where it went.</p>
-          </div>
-          <div style="flex: 1;"></div>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px;">
-            <a <?php echo igi_give_attr( 'general' ); // phpcs:ignore ?> href="#" class="igi-give-trigger scp9" style="flex: 1 1 auto; text-align: center; font-size: 15px; font-weight: 700; color: rgb(250, 248, 244); background: rgb(36, 28, 23); padding: 14px 24px; border-radius: 999px; text-decoration: none;">Donate now</a>
-            <button type="button" class="igi-camp-toggle scpa" aria-expanded="false" aria-controls="igi-camp-panel-3" style="flex: 0 0 auto; font-family: 'Hanken Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: rgb(36, 28, 23); background: transparent; border: 1.5px solid rgb(201, 188, 168); padding: 12.5px 20px; border-radius: 999px; cursor: pointer;">More details</button>
           </div>
         </div>
       </div>
