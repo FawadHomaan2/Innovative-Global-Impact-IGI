@@ -29,7 +29,7 @@
 
   
   <!-- CAMPAIGNS SHOWCASE -->
-  <section style="background: rgb(250, 248, 244); padding: clamp(56px, 7vw, 100px) clamp(20px, 5vw, 56px) clamp(24px, 3vw, 40px);">
+  <section style="background: rgb(250, 248, 244); padding: clamp(28px, 3.5vw, 48px) clamp(20px, 5vw, 56px) clamp(24px, 3vw, 40px);">
     <div style="max-width: 1280px; margin: 0 auto;">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: clamp(28px, 3.4vw, 48px);">
         <div>
