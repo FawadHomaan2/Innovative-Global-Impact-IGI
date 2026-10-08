@@ -59,7 +59,7 @@ button.cky-show-desc-btn:not(:hover):not(:active),
 .cky-footer-wrapper a:focus-visible { outline-color: #b7a98f !important; }
 
 /* ============ Organizational chart — Team page ============ */
-.igi-org{max-width:1140px;margin:0 auto;padding:0 clamp(16px,4vw,32px);}
+.igi-org{max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,56px);}
 .igi-org__intro{text-align:center;max-width:46em;margin:0 auto clamp(42px,5vw,64px);}
 .igi-org__eyebrow{font-family:"Spline Sans Mono",monospace;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:rgb(140,125,106);margin-bottom:16px;}
 .igi-org__title{font-family:Newsreader,serif;font-weight:400;font-size:clamp(30px,4.4vw,50px);line-height:1.06;letter-spacing:-.01em;color:rgb(36,28,23);margin-bottom:14px;}
@@ -94,6 +94,16 @@ button.cky-show-desc-btn:not(:hover):not(:active),
 
 /* Strategic Roadmap page (page-id-850): same — the content band owns its padding. */
 .page-id-850 .igi-section{padding-top:0;}
+
+/* These three pages (Team 818, Vacancies 848, Strategic Roadmap 850) route through
+   the generic page template, which caps post-content at the 760px content size and
+   leaves a wide side gutter. Lift that cap so the content bands span the full width
+   like the pattern pages (home, donate, contact, …). */
+.page-id-818 .entry-content,
+.page-id-848 .entry-content,
+.page-id-850 .entry-content{max-width:none !important;}
+/* widen the Vacancies inner column to match the other pages */
+.page-id-848 .igi-vac section{max-width:1280px !important;}
 
 /* Org-chart cards are clickable → open a profile modal */
 .igi-org__card{cursor:pointer;}
