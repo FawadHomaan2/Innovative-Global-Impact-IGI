@@ -202,7 +202,7 @@ function igi_has_dark_hero() {
 	$dark = is_front_page()
 		|| is_home()
 		|| is_singular( 'post' )
-		|| is_page( array( 'about', 'our-work', 'campaigns', 'contact', 'team', 'vacancies', 'strategic-roadmap' ) );
+		|| is_page( array( 'about', 'our-work', 'campaigns', 'contact', 'team', 'vacancies', 'strategic-roadmap', 'terms' ) );
 	return (bool) apply_filters( 'igi_has_dark_hero', $dark );
 }
 

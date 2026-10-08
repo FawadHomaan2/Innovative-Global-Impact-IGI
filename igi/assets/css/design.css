@@ -101,7 +101,10 @@ button.cky-show-desc-btn:not(:hover):not(:active),
    like the pattern pages (home, donate, contact, …). */
 .page-id-818 .entry-content,
 .page-id-848 .entry-content,
-.page-id-850 .entry-content{max-width:none !important;}
+.page-id-850 .entry-content,
+.page-id-853 .entry-content{max-width:none !important;}
+/* Terms & Conditions page (page-id-853): content band owns its padding. */
+.page-id-853 .igi-section{padding-top:0;}
 /* widen the Vacancies inner column to match the other pages */
 .page-id-848 .igi-vac section{max-width:1280px !important;}
 

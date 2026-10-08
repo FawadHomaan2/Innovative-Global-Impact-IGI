@@ -74,6 +74,9 @@ $igi_year = wp_date( 'Y' );
 		<p class="igi-eyebrow igi-eyebrow--mute" style="letter-spacing:0.02em;text-transform:none">© <?php echo esc_html( $igi_year ); ?> Innovative Global Impact</p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"className":"igi-eyebrow igi-eyebrow--mute"} -->
+		<p class="igi-eyebrow igi-eyebrow--mute"><a href="<?php echo esc_url( home_url( '/terms/' ) ); ?>">Terms &amp; Conditions</a></p>
+		<!-- /wp:paragraph -->
+		<!-- wp:paragraph {"className":"igi-eyebrow igi-eyebrow--mute"} -->
 		<p class="igi-eyebrow igi-eyebrow--mute">Nonprofit organization</p>
 		<!-- /wp:paragraph -->
 	</div>
