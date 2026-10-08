@@ -92,6 +92,9 @@ button.cky-show-desc-btn:not(:hover):not(:active),
    drop the template section's top padding to avoid a doubled gap under the hero. */
 .page-id-848 .igi-section{padding-top:0;}
 
+/* Strategic Roadmap page (page-id-850): same — the content band owns its padding. */
+.page-id-850 .igi-section{padding-top:0;}
+
 /* Org-chart cards are clickable → open a profile modal */
 .igi-org__card{cursor:pointer;}
 .igi-org__card:focus-visible{outline:2px solid rgb(36,28,23);outline-offset:3px;}

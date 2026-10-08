@@ -51,7 +51,10 @@ $igi_here = isset( $_SERVER['REQUEST_URI'] )
 						$igi_vac_url   = home_url( '/vacancies/' );
 						$igi_vac_path  = trailingslashit( (string) wp_parse_url( $igi_vac_url, PHP_URL_PATH ) );
 						$igi_vac_cur   = ( '' !== $igi_here && $igi_vac_path === $igi_here );
-						$igi_about_on  = $igi_current || $igi_team_cur || $igi_vac_cur;
+						$igi_road_url  = home_url( '/strategic-roadmap/' );
+						$igi_road_path = trailingslashit( (string) wp_parse_url( $igi_road_url, PHP_URL_PATH ) );
+						$igi_road_cur  = ( '' !== $igi_here && $igi_road_path === $igi_here );
+						$igi_about_on  = $igi_current || $igi_team_cur || $igi_vac_cur || $igi_road_cur;
 						?>
 						<div class="igi-nav__item igi-nav__item--has-sub">
 							<a class="igi-nav__link<?php echo $igi_about_on ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_url ); ?>"<?php echo $igi_current ? ' aria-current="page"' : ''; ?>>About<span class="igi-nav__caret" aria-hidden="true"></span></a>
@@ -59,6 +62,7 @@ $igi_here = isset( $_SERVER['REQUEST_URI'] )
 								<a class="igi-nav__sublink<?php echo $igi_current ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_url ); ?>" role="menuitem">About IGI</a>
 								<a class="igi-nav__sublink<?php echo $igi_team_cur ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_team_url ); ?>" role="menuitem"<?php echo $igi_team_cur ? ' aria-current="page"' : ''; ?>>Our Team</a>
 								<a class="igi-nav__sublink<?php echo $igi_vac_cur ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_vac_url ); ?>" role="menuitem"<?php echo $igi_vac_cur ? ' aria-current="page"' : ''; ?>>Vacancies</a>
+								<a class="igi-nav__sublink<?php echo $igi_road_cur ? ' is-current' : ''; ?>" href="<?php echo esc_url( $igi_road_url ); ?>" role="menuitem"<?php echo $igi_road_cur ? ' aria-current="page"' : ''; ?>>Strategic Roadmap</a>
 							</div>
 						</div>
 					<?php else : ?>
