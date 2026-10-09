@@ -82,5 +82,9 @@ silently didn't show until the customization was cleared. Templates live at
 
 - Develop on the feature branch `claude/wordpress-customization-chqxr9`.
 - Commit with clear messages; push with `git push -u origin <branch>`.
-- Open PRs against `main`. (PR #1 tracked the first batch of changes.)
+- **Always merge changes into `main`.** The site owner has given standing
+  approval (2026-10) to merge every change into `main` — no PR or extra
+  confirmation needed. After committing and pushing the feature branch, merge
+  it into `main` and push `main` too, so `main` always reflects the live site.
+  Keep developing on the feature branch between merges.
 - Never commit secrets — see `.gitignore`.
