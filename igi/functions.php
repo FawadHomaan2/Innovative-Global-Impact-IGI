@@ -364,3 +364,26 @@ function igi_redirect_campaigns() {
 	}
 }
 add_action( 'template_redirect', 'igi_redirect_campaigns', 1 );
+
+/**
+ * Canonical-domain guard.
+ *
+ * The site's stored siteurl/home are correct (innovativeglobalimpact.org), but a
+ * request reaching the server with a different Host header (e.g. an alternate or
+ * spoofed domain) was once rendered and cached by WP Fastest Cache, so every
+ * visitor was served asset URLs (CSS/JS/fonts) and links pointing at the wrong
+ * domain — which 404'd and broke the header/nav, donate modals and more.
+ *
+ * Forcing the home/siteurl options to the canonical host makes WordPress emit the
+ * right URLs no matter what Host header a request arrives with, so a stray request
+ * can't poison the cache again. (The permanent fix is to also hardcode WP_HOME and
+ * WP_SITEURL in wp-config.php.)
+ */
+if ( ! defined( 'IGI_CANONICAL_URL' ) ) {
+	define( 'IGI_CANONICAL_URL', 'https://innovativeglobalimpact.org' );
+}
+function igi_force_canonical_url( $value ) {
+	return IGI_CANONICAL_URL;
+}
+add_filter( 'option_home', 'igi_force_canonical_url' );
+add_filter( 'option_siteurl', 'igi_force_canonical_url' );
