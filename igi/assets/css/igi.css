@@ -299,6 +299,13 @@ body:not(.has-dark-hero) .igi-header .igi-logo__ink,
    clear the 74px bar so their content isn't hidden under it. */
 body:not(.has-dark-hero) .wp-site-blocks { padding-top: 74px; }
 
+/* Safety net: never allow an accidental horizontal scroll on any screen size
+   (e.g. a third-party plugin's off-canvas modal parked off to the side).
+   overflow-x: clip leaves vertical scroll and position:fixed untouched. */
+html, body { overflow-x: clip; }
+/* Keep the CookieYes consent layers from extending the page width. */
+.cky-consent-container, .cky-modal, .cky-preference-center { max-width: 100vw; }
+
 /* -----------------------------------------------------------------------------
    Section rhythm + dark/adobe bands
    ----------------------------------------------------------------------------- */
