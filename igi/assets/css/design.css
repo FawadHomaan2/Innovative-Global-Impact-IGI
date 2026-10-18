@@ -102,7 +102,10 @@ button.cky-show-desc-btn:not(:hover):not(:active),
 .page-id-818 .entry-content,
 .page-id-848 .entry-content,
 .page-id-850 .entry-content,
-.page-id-853 .entry-content{max-width:none !important;}
+.page-id-853 .entry-content,
+.page-id-862 .entry-content{max-width:none !important;}
+/* Job detail page (page-id-862): content band owns its padding. */
+.page-id-862 .igi-section{padding-top:0;}
 /* Terms & Conditions page (page-id-853): content band owns its padding. */
 .page-id-853 .igi-section{padding-top:0;}
 /* widen the Vacancies inner column to match the other pages */
