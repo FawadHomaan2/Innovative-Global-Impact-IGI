@@ -51,6 +51,13 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
             <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">A general gift gives IGI the flexibility to move fast — covering the pilot closest to its goal, responding to an urgent need, or seeding the next locally-run project. Every dollar stays with the work, and we report back on where it went.</p>
           </div>
           <div style="flex: 1;"></div>
+          <div class="igi-goal" data-form="<?php echo (int) igi_give_form_id( 'general' ); ?>" style="margin-top:22px;">
+            <div style="height:8px;background:rgb(228,216,198);border-radius:999px;overflow:hidden;"><span class="igi-goal__fill" style="display:block;height:100%;width:0;background:rgb(36,28,23);border-radius:999px;transition:width .8s ease;"></span></div>
+            <div style="display:flex;justify-content:space-between;gap:10px;margin-top:9px;font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.02em;color:rgb(99,90,80);">
+              <span class="igi-goal__raised" style="font-weight:600;color:rgb(36,28,23);">Loading…</span>
+              <span class="igi-goal__goal"></span>
+            </div>
+          </div>
           <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px;">
             <a <?php echo igi_give_attr( 'general' ); // phpcs:ignore ?> href="#" class="igi-give-trigger scp9" style="flex: 1 1 auto; text-align: center; font-size: 15px; font-weight: 700; color: rgb(250, 248, 244); background: rgb(36, 28, 23); padding: 14px 24px; border-radius: 999px; text-decoration: none;">Donate now</a>
             <button type="button" class="igi-camp-toggle scpa" aria-expanded="false" aria-controls="igi-camp-panel-3" style="flex: 0 0 auto; font-family: 'Hanken Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: rgb(36, 28, 23); background: transparent; border: 1.5px solid rgb(201, 188, 168); padding: 12.5px 20px; border-radius: 999px; cursor: pointer;">More details</button>
@@ -73,6 +80,13 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
             <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">Pregnant women, the elderly, and children walk 1 to 1.5 hours daily to collect water from distant, unsafe sources, and the prolonged crisis has forced some families to abandon their homes and migrate. This intervention delivers reliable, sustainable water access to reduce disease, prevent displacement, and restore basic dignity.</p>
           </div>
           <div style="flex: 1;"></div>
+          <div class="igi-goal" data-form="<?php echo (int) igi_give_form_id( 'ghor' ); ?>" style="margin-top:22px;">
+            <div style="height:8px;background:rgb(228,216,198);border-radius:999px;overflow:hidden;"><span class="igi-goal__fill" style="display:block;height:100%;width:0;background:rgb(36,28,23);border-radius:999px;transition:width .8s ease;"></span></div>
+            <div style="display:flex;justify-content:space-between;gap:10px;margin-top:9px;font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.02em;color:rgb(99,90,80);">
+              <span class="igi-goal__raised" style="font-weight:600;color:rgb(36,28,23);">Loading…</span>
+              <span class="igi-goal__goal"></span>
+            </div>
+          </div>
           <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px;">
             <a <?php echo igi_give_attr( 'ghor' ); // phpcs:ignore ?> href="#" class="igi-give-trigger scp9" style="flex: 1 1 auto; text-align: center; font-size: 15px; font-weight: 700; color: rgb(250, 248, 244); background: rgb(36, 28, 23); padding: 14px 24px; border-radius: 999px; text-decoration: none;">Donate now</a>
             <button type="button" class="igi-camp-toggle scpa" aria-expanded="false" aria-controls="igi-camp-panel-0" style="flex: 0 0 auto; font-family: 'Hanken Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: rgb(36, 28, 23); background: transparent; border: 1.5px solid rgb(201, 188, 168); padding: 12.5px 20px; border-radius: 999px; cursor: pointer;">More details</button>
@@ -95,6 +109,13 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
             <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">Many women must be referred to other provinces for basic obstetric and neonatal care, but extreme poverty and transport costs make that impossible — so delayed or missed referrals often end in preventable deaths. This pilot equips wards with essential devices, strengthens newborn care, and keeps services running locally so women receive life-saving care without leaving the province.</p>
           </div>
           <div style="flex: 1;"></div>
+          <div class="igi-goal" data-form="<?php echo (int) igi_give_form_id( 'faryab' ); ?>" style="margin-top:22px;">
+            <div style="height:8px;background:rgb(228,216,198);border-radius:999px;overflow:hidden;"><span class="igi-goal__fill" style="display:block;height:100%;width:0;background:rgb(36,28,23);border-radius:999px;transition:width .8s ease;"></span></div>
+            <div style="display:flex;justify-content:space-between;gap:10px;margin-top:9px;font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.02em;color:rgb(99,90,80);">
+              <span class="igi-goal__raised" style="font-weight:600;color:rgb(36,28,23);">Loading…</span>
+              <span class="igi-goal__goal"></span>
+            </div>
+          </div>
           <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px;">
             <a <?php echo igi_give_attr( 'faryab' ); // phpcs:ignore ?> href="#" class="igi-give-trigger scp9" style="flex: 1 1 auto; text-align: center; font-size: 15px; font-weight: 700; color: rgb(250, 248, 244); background: rgb(36, 28, 23); padding: 14px 24px; border-radius: 999px; text-decoration: none;">Donate now</a>
             <button type="button" class="igi-camp-toggle scpa" aria-expanded="false" aria-controls="igi-camp-panel-1" style="flex: 0 0 auto; font-family: 'Hanken Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: rgb(36, 28, 23); background: transparent; border: 1.5px solid rgb(201, 188, 168); padding: 12.5px 20px; border-radius: 999px; cursor: pointer;">More details</button>
@@ -117,6 +138,13 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
             <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">By preserving traditional knowledge and investing in women's skills, this project creates lasting opportunities for greater economic independence and stronger communities.</p>
           </div>
           <div style="flex: 1;"></div>
+          <div class="igi-goal" data-form="<?php echo (int) igi_give_form_id( 'daykundi' ); ?>" style="margin-top:22px;">
+            <div style="height:8px;background:rgb(228,216,198);border-radius:999px;overflow:hidden;"><span class="igi-goal__fill" style="display:block;height:100%;width:0;background:rgb(36,28,23);border-radius:999px;transition:width .8s ease;"></span></div>
+            <div style="display:flex;justify-content:space-between;gap:10px;margin-top:9px;font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.02em;color:rgb(99,90,80);">
+              <span class="igi-goal__raised" style="font-weight:600;color:rgb(36,28,23);">Loading…</span>
+              <span class="igi-goal__goal"></span>
+            </div>
+          </div>
           <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px;">
             <a <?php echo igi_give_attr( 'daykundi' ); // phpcs:ignore ?> href="#" class="igi-give-trigger scp9" style="flex: 1 1 auto; text-align: center; font-size: 15px; font-weight: 700; color: rgb(250, 248, 244); background: rgb(36, 28, 23); padding: 14px 24px; border-radius: 999px; text-decoration: none;">Donate now</a>
             <button type="button" class="igi-camp-toggle scpa" aria-expanded="false" aria-controls="igi-camp-panel-2" style="flex: 0 0 auto; font-family: 'Hanken Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: rgb(36, 28, 23); background: transparent; border: 1.5px solid rgb(201, 188, 168); padding: 12.5px 20px; border-radius: 999px; cursor: pointer;">More details</button>
@@ -139,6 +167,30 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
         if (panel) { panel.classList.toggle('is-open', !open); }
       });
     }
+  })();
+  </script>
+
+  <script>
+  (function(){
+    function usd(n){try{return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);}catch(e){return '$'+Math.round(n);}}
+    var nodes=document.querySelectorAll('.igi-port .igi-goal[data-form]');
+    if(!nodes.length) return;
+    fetch('/wp-json/givewp/v3/campaigns?per_page=100',{headers:{'Accept':'application/json'}})
+      .then(function(r){return r.ok?r.json():[];})
+      .then(function(list){
+        var map={};
+        (list||[]).forEach(function(c){ if(c&&c.defaultFormId!=null){ map[c.defaultFormId]={goal:Number(c.goal)||0, actual:(c.goalStats&&Number(c.goalStats.actual))||0}; } });
+        nodes.forEach(function(el){
+          var d=map[el.getAttribute('data-form')];
+          var raised=el.querySelector('.igi-goal__raised'), goalEl=el.querySelector('.igi-goal__goal'), fill=el.querySelector('.igi-goal__fill');
+          if(!d||!d.goal){ if(raised)raised.textContent=d?usd(d.actual)+' raised':''; if(goalEl)goalEl.textContent=''; return; }
+          var pct=Math.max(0,Math.min(100,Math.round(d.actual/d.goal*100)));
+          if(pct===0 && d.actual>0) pct=2;
+          if(raised) raised.textContent=usd(d.actual)+' raised';
+          if(goalEl) goalEl.textContent='Goal '+usd(d.goal);
+          if(fill) requestAnimationFrame(function(){ fill.style.width=pct+'%'; });
+        });
+      }).catch(function(){ nodes.forEach(function(el){var r=el.querySelector('.igi-goal__raised'); if(r)r.textContent='';}); });
   })();
   </script>
 
