@@ -20,6 +20,9 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
 <style>
   .igi-port .igi-camp-panel { display: none; }
   .igi-port .igi-camp-panel.is-open { display: flex; flex-direction: column; gap: 12px; margin-top: 18px; }
+  .igi-camp-grid { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: clamp(20px, 2.4vw, 30px); align-items: stretch; }
+  .igi-camp-grid > div { height: 100%; }
+  @media (max-width: 700px) { .igi-camp-grid { grid-template-columns: 1fr; grid-auto-rows: auto; } }
 </style>
 
   <!-- COMPACT INTRO HERO -->
@@ -35,7 +38,7 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
 
   <!-- DONATE CARDS -->
   <section style="background: rgb(250, 248, 244); padding: clamp(48px, 6vw, 88px) clamp(20px, 5vw, 56px) clamp(64px, 8vw, 104px);">
-    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: clamp(20px, 2.4vw, 30px); align-items: start;">
+    <div class="igi-camp-grid">
 
       <!-- GENERAL FUND · ALL PILOTS -->
       <div data-rev style="display: flex; flex-direction: column; background: #fff; border: 1px solid rgb(228, 216, 198); border-radius: 8px; overflow: hidden;">
