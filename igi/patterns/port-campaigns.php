@@ -20,10 +20,9 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
 <style>
   .igi-port .igi-camp-panel { display: none; }
   .igi-port .igi-camp-panel.is-open { display: flex; flex-direction: column; gap: 12px; margin-top: 18px; }
-  .igi-camp-grid { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: clamp(20px, 2.4vw, 30px); align-items: stretch; }
-  .igi-camp-grid > div { height: 100%; }
+  .igi-camp-grid { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 2.4vw, 30px); align-items: start; }
   @media (min-width: 992px) { .igi-camp-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-  @media (max-width: 700px) { .igi-camp-grid { grid-template-columns: 1fr; grid-auto-rows: auto; } }
+  @media (max-width: 700px) { .igi-camp-grid { grid-template-columns: 1fr; } }
 </style>
 
   <!-- COMPACT INTRO HERO -->
@@ -161,6 +160,23 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
 
   <script>
   (function () {
+    var grid = document.querySelector('.igi-port .igi-camp-grid');
+    // Equalize cards at their COLLAPSED height only, so expanding one card
+    // grows that card alone and never pads the others with empty space.
+    function equalize() {
+      if (!grid) return;
+      var cards = Array.prototype.slice.call(grid.children);
+      cards.forEach(function (c) { c.style.minHeight = ''; });
+      if (window.innerWidth <= 700) return; // mobile: single column, natural height
+      // measure with every panel closed, then restore the ones that were open
+      var openPanels = Array.prototype.slice.call(grid.querySelectorAll('.igi-camp-panel.is-open'));
+      openPanels.forEach(function (p) { p.classList.remove('is-open'); });
+      var max = 0;
+      cards.forEach(function (c) { if (c.offsetHeight > max) max = c.offsetHeight; });
+      cards.forEach(function (c) { c.style.minHeight = max + 'px'; });
+      openPanels.forEach(function (p) { p.classList.add('is-open'); });
+    }
+
     var toggles = document.querySelectorAll('.igi-port .igi-camp-toggle');
     for (var i = 0; i < toggles.length; i++) {
       toggles[i].addEventListener('click', function () {
@@ -171,6 +187,13 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
         if (panel) { panel.classList.toggle('is-open', !open); }
       });
     }
+
+    equalize();
+    window.addEventListener('load', equalize);
+    if (document.fonts) { if (document.fonts.ready) { document.fonts.ready.then(equalize); } }
+    var rt;
+    window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(equalize, 150); });
+    window.__igiCampEqualize = equalize;
   })();
   </script>
 
@@ -194,6 +217,7 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
           if(goalEl) goalEl.textContent='Goal '+usd(d.goal);
           if(fill) requestAnimationFrame(function(){ fill.style.width=pct+'%'; });
         });
+        if(typeof window.__igiCampEqualize==='function') window.__igiCampEqualize();
       }).catch(function(){ nodes.forEach(function(el){var r=el.querySelector('.igi-goal__raised'); if(r)r.textContent='';}); });
   })();
   </script>
