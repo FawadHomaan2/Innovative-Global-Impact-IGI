@@ -44,8 +44,8 @@
           <img src="https://innovativeglobalimpact.org/wp-content/uploads/2026/09/Image-3-1024x768.jpeg" alt="Children beside rows of water jerrycans in Ghor" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block;">
           <div style="display: flex; flex-direction: column; flex: 1; padding: clamp(22px, 2vw, 28px);">
             <div style="font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(99, 90, 80); margin-bottom: 12px;">Water · Ghor</div>
-            <h3 style="font-family: Newsreader, serif; font-weight: 400; font-size: 25px; line-height: 1.1; color: rgb(36, 28, 23); margin-bottom: 10px;">Water within reach</h3>
-            <p style="font-size: 15px; line-height: 1.55; color: rgb(106, 95, 83);">63 families drinking unsafe water — a solar-powered pipeline brings them clean, reliable supply.</p>
+            <h3 style="font-family: Newsreader, serif; font-weight: 400; font-size: 25px; line-height: 1.1; color: rgb(36, 28, 23); margin-bottom: 10px;">She lost her baby carrying water</h3>
+            <p style="font-size: 15px; line-height: 1.55; color: rgb(106, 95, 83);">There is no water near home in Ghor. Families climb a valley slope for every drop, and the journey has cost lives.</p>
             <div style="flex: 1;"></div>
             <span class="scp3" style="display: inline-flex; align-items: center; gap: 7px; margin-top: 20px; font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(36, 28, 23);">Support this →</span>
           </div>

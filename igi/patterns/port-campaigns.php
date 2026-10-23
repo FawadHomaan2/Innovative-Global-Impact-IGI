@@ -29,7 +29,7 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
     <div style="position: relative; max-width: 1280px; margin: 0 auto;">
       <div style="font-family: 'Spline Sans Mono', monospace; font-size: 12.5px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(237, 230, 218); margin-bottom: 22px;">Ways to give</div>
       <h1 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(40px, 5.6vw, 76px); line-height: 1.0; letter-spacing: -0.012em; color: rgb(251, 247, 240);">Choose a cause<br>to <span style="font-style: italic; color: rgb(237, 230, 218);">support</span>.</h1>
-      <p style="font-size: clamp(16px, 1.5vw, 19px); line-height: 1.55; color: rgb(228, 216, 198); max-width: 36em; margin-top: 24px;">Fund a real project today — clean water and newborn care in Ghor, and skills for women in Nangarhar — or give to the general fund and we'll direct it where it's needed most. Any amount, once or monthly.</p>
+      <p style="font-size: clamp(16px, 1.5vw, 19px); line-height: 1.55; color: rgb(228, 216, 198); max-width: 36em; margin-top: 24px;">Fund a real project today: clean water and newborn care in Ghor, and skills for women in Nangarhar. Or give to the general fund and we'll direct it where it's needed most. Any amount, once or monthly.</p>
     </div>
   </section>
 
@@ -46,9 +46,9 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
         <div style="display: flex; flex-direction: column; flex: 1; padding: clamp(24px, 2.2vw, 32px);">
           <div style="font-family: 'Spline Sans Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(99, 90, 80); margin-bottom: 14px;">General fund · All pilots</div>
           <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(25px, 2.3vw, 31px); line-height: 1.1; letter-spacing: -0.01em; color: rgb(36, 28, 23);">Give where it's <span style="font-style: italic; color: rgb(36, 28, 23);">needed most</span></h2>
-          <p style="font-size: 16px; line-height: 1.6; color: rgb(74, 64, 54); margin-top: 14px;">Not sure which to choose? Give to IGI's general fund and we'll direct your gift to the pilot that needs it most — clean water, newborn survival, or women's livelihoods.</p>
+          <p style="font-size: 16px; line-height: 1.6; color: rgb(74, 64, 54); margin-top: 14px;">Not sure which to choose? Give to IGI's general fund and we'll direct your gift to the pilot that needs it most: clean water, newborn survival, or women's livelihoods.</p>
           <div class="igi-camp-panel" id="igi-camp-panel-3" style="border-left: 3px solid rgb(36, 28, 23); padding-left: 16px;">
-            <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">A general gift gives IGI the flexibility to move fast — covering the pilot closest to its goal, responding to an urgent need, or seeding the next locally-run project. Every dollar stays with the work, and we report back on where it went.</p>
+            <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">A general gift gives IGI the flexibility to move fast, covering the pilot closest to its goal, responding to an urgent need, or seeding the next locally-run project. Every dollar stays with the work, and we report back on where it went.</p>
           </div>
           <div style="flex: 1;"></div>
           <div class="igi-goal" data-form="<?php echo (int) igi_give_form_id( 'general' ); ?>" style="margin-top:22px;">
@@ -74,10 +74,10 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
         <div style="display: flex; flex-direction: column; flex: 1; padding: clamp(24px, 2.2vw, 32px);">
           <div style="font-family: 'Spline Sans Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(99, 90, 80); margin-bottom: 14px;">Water · Ghor</div>
           <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(25px, 2.3vw, 31px); line-height: 1.1; letter-spacing: -0.01em; color: rgb(36, 28, 23);">She lost her baby <span style="font-style: italic; color: rgb(36, 28, 23);">carrying water</span></h2>
-          <p style="font-size: 16px; line-height: 1.6; color: rgb(74, 64, 54); margin-top: 14px;">In rural Ghor there is no water near home. Families climb down into the valley and back up the slope for every drop. One woman &mdash; finally pregnant after nine years &mdash; lost her baby making that climb.</p>
+          <p style="font-size: 16px; line-height: 1.6; color: rgb(74, 64, 54); margin-top: 14px;">In rural Ghor there is no water near home. Families climb down into the valley and back up the slope for every drop. After nine years trying for a child, one woman was finally pregnant. She lost her baby making that climb.</p>
           <div class="igi-camp-panel" id="igi-camp-panel-0" style="border-left: 3px solid rgb(36, 28, 23); padding-left: 16px;">
-            <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">&ldquo;I&rsquo;d been married nine years, and I went to every province in Afghanistan for treatment so I could have a child. I was eight weeks pregnant. Because we have no water, I went down to fetch it &mdash; and I lost my baby. My heart aches so much.&rdquo;</p>
-            <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">The nearest water is a tree down in the valley. Families fill up there and climb straight up to their houses. People can&rsquo;t bathe their children even once a week, and disease has spread &mdash; diarrhea, whooping cough, paralysis, trachoma and skin infections. &ldquo;For God&rsquo;s sake, if they hear our voice, please help us. Save us from these water problems.&rdquo;</p>
+            <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">&ldquo;I&rsquo;d been married nine years, and I went to every province in Afghanistan for treatment so I could have a child. I was eight weeks pregnant. Because we have no water, I went down to fetch it, and I lost my baby. My heart aches so much.&rdquo;</p>
+            <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">The nearest water is a tree down in the valley. Families fill up there and climb straight up to their houses. People can&rsquo;t bathe their children even once a week, so disease has spread: diarrhea, whooping cough, paralysis, trachoma and skin infections. &ldquo;For God&rsquo;s sake, if they hear our voice, please help us. Save us from these water problems.&rdquo;</p>
           </div>
           <div style="flex: 1;"></div>
           <div class="igi-goal" data-form="<?php echo (int) igi_give_form_id( 'ghor' ); ?>" style="margin-top:22px;">
@@ -106,7 +106,7 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
           <p style="font-size: 16px; line-height: 1.6; color: rgb(74, 64, 54); margin-top: 14px;">The Frugal Maternity Care Pilot equips one maternity and newborn unit with off-grid technology, so babies receive warmth, oxygen, and emergency care even when the electricity fails.</p>
           <div class="igi-camp-panel" id="igi-camp-panel-1" style="border-left: 3px solid rgb(36, 28, 23); padding-left: 16px;">
             <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">In the maternal and newborn units of public health facilities in Feroz Koh, Ghor Province, childbirth is increasingly high-risk due to critical shortages of essential equipment and unstable service capacity.</p>
-            <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">Many women must be referred to other provinces for basic obstetric and neonatal care, but extreme poverty and transport costs make that impossible — so delayed or missed referrals often end in preventable deaths. This pilot equips wards with essential devices, strengthens newborn care, and keeps services running locally so women receive life-saving care without leaving the province.</p>
+            <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">Many women must be referred to other provinces for basic obstetric and neonatal care, but extreme poverty and transport costs make that impossible, so delayed or missed referrals often end in preventable deaths. This pilot equips wards with essential devices, strengthens newborn care, and keeps services running locally so women receive life-saving care without leaving the province.</p>
           </div>
           <div style="flex: 1;"></div>
           <div class="igi-goal" data-form="<?php echo (int) igi_give_form_id( 'faryab' ); ?>" style="margin-top:22px;">
@@ -134,7 +134,7 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
           <h2 style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(25px, 2.3vw, 31px); line-height: 1.1; letter-spacing: -0.01em; color: rgb(36, 28, 23);">Turning local resources into <span style="font-style: italic; color: rgb(36, 28, 23);">opportunity</span></h2>
           <p style="font-size: 16px; line-height: 1.6; color: rgb(74, 64, 54); margin-top: 14px;">Through this pilot, women in Nangarhar will gain practical skills in traditional distillation, transforming local flowers and natural resources into sustainable livelihoods.</p>
           <div class="igi-camp-panel" id="igi-camp-panel-2" style="border-left: 3px solid rgb(36, 28, 23); padding-left: 16px;">
-            <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">For many women in Nangarhar, opportunity is limited — but the natural resources around them are abundant. The Women's Attar Initiative trains women in traditional distillation, giving them the skills to turn local flowers into valuable products and sustainable livelihood opportunities.</p>
+            <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">For many women in Nangarhar, opportunity is limited, but the natural resources around them are abundant. The Women's Attar Initiative trains women in traditional distillation, giving them the skills to turn local flowers into valuable products and sustainable livelihood opportunities.</p>
             <p style="font-size: 14.5px; line-height: 1.6; color: rgb(74, 64, 54);">By preserving traditional knowledge and investing in women's skills, this project creates lasting opportunities for greater economic independence and stronger communities.</p>
           </div>
           <div style="flex: 1;"></div>
