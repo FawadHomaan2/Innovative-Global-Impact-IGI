@@ -22,6 +22,7 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
   .igi-port .igi-camp-panel.is-open { display: flex; flex-direction: column; gap: 12px; margin-top: 18px; }
   .igi-camp-grid { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: clamp(20px, 2.4vw, 30px); align-items: stretch; }
   .igi-camp-grid > div { height: 100%; }
+  @media (min-width: 992px) { .igi-camp-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (max-width: 700px) { .igi-camp-grid { grid-template-columns: 1fr; grid-auto-rows: auto; } }
 </style>
 
