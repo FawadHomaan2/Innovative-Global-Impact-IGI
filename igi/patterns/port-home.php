@@ -45,7 +45,7 @@
           <div style="display: flex; flex-direction: column; flex: 1; padding: clamp(22px, 2vw, 28px);">
             <div style="font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(99, 90, 80); margin-bottom: 12px;">Water · Tappa-e-Shahida, Ghor</div>
             <h3 style="font-family: Newsreader, serif; font-weight: 400; font-size: 25px; line-height: 1.1; color: rgb(36, 28, 23); margin-bottom: 10px;">She lost her baby carrying water</h3>
-            <p style="font-size: 15px; line-height: 1.55; color: rgb(106, 95, 83);">In Tappa-e-Shahida village in Ghor, 70 households share one unreliable water source at the bottom of a steep path. One mother lost her baby making that climb.</p>
+            <p style="font-size: 15px; line-height: 1.55; color: rgb(106, 95, 83);">In Tappa-e-Shahida village in Ghor, 90 to 100 families share one unreliable water source at the bottom of a steep path. One mother lost her baby making that climb.</p>
             <div style="flex: 1;"></div>
             <span class="scp3" style="display: inline-flex; align-items: center; gap: 7px; margin-top: 20px; font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: rgb(36, 28, 23);">Support this →</span>
           </div>
