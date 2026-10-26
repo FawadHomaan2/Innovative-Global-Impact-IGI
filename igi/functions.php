@@ -387,3 +387,158 @@ function igi_force_canonical_url( $value ) {
 }
 add_filter( 'option_home', 'igi_force_canonical_url' );
 add_filter( 'option_siteurl', 'igi_force_canonical_url' );
+
+/**
+ * Branded chrome for the GiveWP single donation-form pages (/donations/<slug>/).
+ *
+ * GiveWP renders those pages with a minimal get_header()/get_footer(), so the
+ * block theme's nav, hero and footer never appear — leaving a bare site-title
+ * and a naked form. This injects a branded top bar, a campaign hero with a live
+ * goal bar, an "other campaigns" strip and a footer, and places them around the
+ * form client-side (the form is a stable anchor: .root-data-givewp-embed).
+ *
+ * Gated to single give_forms pages and purely additive: if the JS or markup
+ * fails, the donation form itself is untouched and still works.
+ */
+function igi_give_single_meta() {
+	$assets = get_template_directory_uri() . '/assets/images/';
+	return array(
+		747 => array( 'slug' => 'water-that-never-reaches-them',     'eyebrow' => 'Water · Tappa-e-Shahida, Ghor', 'title' => 'She lost her baby carrying water',              'blurb' => 'In Tappa-e-Shahida, Ghor, 90 to 100 families share one unreliable water source at the bottom of a steep, icy path. Your gift brings safe water close to home.', 'img' => $assets . 'ghor-water-families-waiting.jpg' ),
+		751 => array( 'slug' => 'when-birth-becomes-survival',        'eyebrow' => 'Survival · Ghor',                 'title' => 'Power failures shouldn’t cost a newborn’s life', 'blurb' => 'Equip a maternity and newborn unit in Ghor with off-grid power, so babies get warmth, oxygen and emergency care even when the electricity fails.',                 'img' => home_url( '/wp-content/uploads/2026/08/newborns-scaled.jpg' ) ),
+		749 => array( 'slug' => 'where-poverty-becomes-opportunity',  'eyebrow' => 'Opportunity · Nangarhar',         'title' => 'Turning local resources into opportunity',        'blurb' => 'Train women in Nangarhar to turn local flowers into sustainable livelihoods through traditional distillation.',                                                 'img' => $assets . 'nangarhar-flowers-harvest.jpg' ),
+		137 => array( 'slug' => 'fundraising-campaign',               'eyebrow' => 'General fund · All pilots',       'title' => 'Give where it’s needed most',                 'blurb' => 'Give to IGI’s general fund and we’ll direct your gift to the pilot that needs it most.',                                                                 'img' => home_url( '/wp-content/uploads/2026/09/delivering-equipments-880x620.jpg' ) ),
+	);
+}
+
+function igi_give_single_chrome() {
+	if ( ! is_singular( 'give_forms' ) ) {
+		return;
+	}
+	$meta = igi_give_single_meta();
+	$id   = (int) get_queried_object_id();
+	$cur  = isset( $meta[ $id ] ) ? $meta[ $id ] : null;
+	$home = home_url( '/' );
+
+	$css = <<<'GSCSS'
+<style id="igi-gs-css">
+body.single-give_forms{background:rgb(250,248,244)!important;}
+body.single-give_forms h1,body.single-give_forms .description,body.single-give_forms hr,body.single-give_forms #footer{display:none!important;}
+.igi-gs-top,.igi-gs-bottom{font-family:'Hanken Grotesk',system-ui,sans-serif;color:rgb(36,28,23);}
+.igi-gs-bar{max-width:1180px;margin:0 auto;padding:18px clamp(16px,5vw,40px);display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.igi-gs-bar a{text-decoration:none;color:inherit;}
+.igi-gs-bar__brand{font-family:Newsreader,serif;font-size:clamp(18px,2.2vw,23px);font-weight:500;letter-spacing:-.01em;}
+.igi-gs-bar__link{font-family:'Spline Sans Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgb(99,90,80);border:1px solid rgb(201,188,168);padding:9px 16px;border-radius:999px;white-space:nowrap;}
+.igi-gs-bar__link:hover{background:#fff;}
+.igi-gs-hero{position:relative;overflow:hidden;background:rgb(23,18,14);}
+.igi-gs-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;}
+.igi-gs-hero__wrap{position:relative;max-width:760px;margin:0 auto;padding:clamp(40px,6vw,76px) clamp(16px,5vw,40px) clamp(96px,11vw,140px);text-align:center;color:rgb(251,247,240);}
+.igi-gs-hero__eyebrow{font-family:'Spline Sans Mono',monospace;font-size:12.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgb(237,230,218);margin-bottom:18px;}
+.igi-gs-hero__title{font-family:Newsreader,serif;font-weight:400;font-size:clamp(30px,5vw,52px);line-height:1.05;letter-spacing:-.012em;margin:0 0 16px;}
+.igi-gs-hero__blurb{font-size:clamp(15px,1.6vw,18px);line-height:1.6;color:rgb(228,216,198);max-width:40em;margin:0 auto 26px;}
+.igi-gs-goal{max-width:420px;margin:0 auto;}
+.igi-gs-goal__track{height:9px;background:rgba(255,255,255,.22);border-radius:999px;overflow:hidden;}
+.igi-gs-goal__fill{display:block;height:100%;width:0;background:rgb(237,230,218);border-radius:999px;transition:width .8s ease;}
+.igi-gs-goal__row{display:flex;justify-content:space-between;gap:10px;margin-top:9px;font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:.02em;color:rgb(228,216,198);}
+.igi-gs-goal__raised{font-weight:600;color:#fff;}
+body.single-give_forms .root-data-givewp-embed{max-width:560px!important;margin:-74px auto 0!important;position:relative;z-index:2;border-radius:16px;box-shadow:0 30px 60px -30px rgba(36,28,23,.5);}
+.igi-gs-more{max-width:1180px;margin:clamp(50px,7vw,86px) auto 0;padding:0 clamp(16px,5vw,40px);}
+.igi-gs-more__h{text-align:center;font-family:Newsreader,serif;font-weight:400;font-size:clamp(23px,3vw,32px);color:rgb(36,28,23);margin:0 0 6px;}
+.igi-gs-more__sub{text-align:center;font-size:14.5px;color:rgb(106,95,83);margin:0 0 30px;}
+.igi-gs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(16px,2vw,24px);}
+.igi-gs-card{display:flex;flex-direction:column;background:#fff;border:1px solid rgb(228,216,198);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;}
+.igi-gs-card:hover{transform:translateY(-3px);box-shadow:0 22px 40px -26px rgba(36,28,23,.45);}
+.igi-gs-card__img{aspect-ratio:16/10;object-fit:cover;width:100%;display:block;}
+.igi-gs-card__body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1;}
+.igi-gs-card__eyebrow{font-family:'Spline Sans Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgb(99,90,80);margin-bottom:9px;}
+.igi-gs-card__title{font-family:Newsreader,serif;font-weight:500;font-size:19px;line-height:1.14;color:rgb(36,28,23);margin:0 0 16px;}
+.igi-gs-card__cta{margin-top:auto;font-family:'Spline Sans Mono',monospace;font-size:12.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:rgb(36,28,23);}
+.igi-gs-foot{margin-top:clamp(50px,7vw,86px);background:rgb(23,18,14);color:rgb(179,167,148);}
+.igi-gs-foot__wrap{max-width:1180px;margin:0 auto;padding:clamp(34px,4vw,52px) clamp(16px,5vw,40px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;}
+.igi-gs-foot__brand{font-family:Newsreader,serif;font-size:20px;color:rgb(251,247,240);text-decoration:none;}
+.igi-gs-foot__nav{display:flex;flex-wrap:wrap;gap:18px;}
+.igi-gs-foot__nav a{color:rgb(179,167,148);text-decoration:none;font-size:14px;}
+.igi-gs-foot__nav a:hover{color:#fff;}
+.igi-gs-foot__legal{width:100%;font-size:12px;color:rgb(128,118,104);border-top:1px solid rgba(255,255,255,.08);padding-top:16px;margin-top:4px;}
+@media(max-width:600px){body.single-give_forms .root-data-givewp-embed{margin-top:-54px!important;}}
+</style>
+GSCSS;
+
+	$bar = sprintf(
+		'<div class="igi-gs-bar"><a class="igi-gs-bar__brand" href="%s">Innovative Global Impact</a><a class="igi-gs-bar__link" href="%s">&larr; All ways to give</a></div>',
+		esc_url( $home ),
+		esc_url( home_url( '/donate/' ) )
+	);
+
+	$hero = '';
+	if ( $cur ) {
+		$hero = sprintf(
+			'<div class="igi-gs-hero"><img class="igi-gs-hero__img" src="%s" alt=""><div class="igi-gs-hero__wrap"><div class="igi-gs-hero__eyebrow">%s</div><div class="igi-gs-hero__title">%s</div><p class="igi-gs-hero__blurb">%s</p><div class="igi-gs-goal igi-goal" data-form="%d"><div class="igi-gs-goal__track"><span class="igi-gs-goal__fill igi-goal__fill"></span></div><div class="igi-gs-goal__row"><span class="igi-gs-goal__raised igi-goal__raised">Loading&hellip;</span><span class="igi-gs-goal__goal igi-goal__goal"></span></div></div></div></div>',
+			esc_url( $cur['img'] ),
+			esc_html( $cur['eyebrow'] ),
+			esc_html( $cur['title'] ),
+			esc_html( $cur['blurb'] ),
+			$id
+		);
+	}
+
+	$cards = '';
+	foreach ( $meta as $fid => $m ) {
+		if ( (int) $fid === $id ) {
+			continue;
+		}
+		$cards .= sprintf(
+			'<a class="igi-gs-card" href="%s"><img class="igi-gs-card__img" src="%s" alt="" loading="lazy"><div class="igi-gs-card__body"><div class="igi-gs-card__eyebrow">%s</div><h3 class="igi-gs-card__title">%s</h3><span class="igi-gs-card__cta">Donate &rarr;</span></div></a>',
+			esc_url( home_url( '/donations/' . $m['slug'] . '/' ) ),
+			esc_url( $m['img'] ),
+			esc_html( $m['eyebrow'] ),
+			esc_html( $m['title'] )
+		);
+	}
+
+	$footer = sprintf(
+		'<footer class="igi-gs-foot"><div class="igi-gs-foot__wrap"><a class="igi-gs-foot__brand" href="%s">Innovative Global Impact</a><nav class="igi-gs-foot__nav"><a href="%s">Home</a><a href="%s">About</a><a href="%s">Our Work</a><a href="%s">Contact</a><a href="%s">Donate</a></nav><div class="igi-gs-foot__legal">&copy; %s Innovative Global Impact &middot; A U.S. 501(c)(3) nonprofit &middot; 100%% Secure Donation</div></div></footer>',
+		esc_url( $home ),
+		esc_url( $home ),
+		esc_url( home_url( '/about/' ) ),
+		esc_url( home_url( '/our-work/' ) ),
+		esc_url( home_url( '/contact/' ) ),
+		esc_url( home_url( '/donate/' ) ),
+		esc_html( gmdate( 'Y' ) )
+	);
+
+	$js = <<<'GSJS'
+<script>
+(function(){
+  try{
+    var form=document.querySelector('.root-data-givewp-embed');
+    var top=document.querySelector('.igi-gs-top'),bot=document.querySelector('.igi-gs-bottom');
+    if(form&&top&&form.parentNode){form.parentNode.insertBefore(top,form);}
+    if(form&&bot&&form.parentNode){if(form.nextSibling){form.parentNode.insertBefore(bot,form.nextSibling);}else{form.parentNode.appendChild(bot);}}
+  }catch(e){}
+  function usd(n){try{return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);}catch(e){return '$'+Math.round(n);}}
+  var nodes=document.querySelectorAll('.igi-goal[data-form]');
+  if(!nodes.length){return;}
+  fetch('/wp-json/givewp/v3/campaigns?per_page=100',{headers:{'Accept':'application/json'}})
+   .then(function(r){return r.ok?r.json():[];})
+   .then(function(list){
+     var map={};(list||[]).forEach(function(c){if(c&&c.defaultFormId!=null){map[c.defaultFormId]={goal:Number(c.goal)||0,actual:(c.goalStats&&Number(c.goalStats.actual))||0};}});
+     nodes.forEach(function(el){
+       var d=map[el.getAttribute('data-form')];
+       var raised=el.querySelector('.igi-goal__raised'),goalEl=el.querySelector('.igi-goal__goal'),fill=el.querySelector('.igi-goal__fill');
+       if(!d||!d.goal){if(raised){raised.textContent=d?usd(d.actual)+' raised':'';}if(goalEl){goalEl.textContent='';}return;}
+       var pct=Math.max(0,Math.min(100,Math.round(d.actual/d.goal*100)));if(pct===0&&d.actual>0){pct=2;}
+       if(raised){raised.textContent=usd(d.actual)+' raised';}
+       if(goalEl){goalEl.textContent='Goal '+usd(d.goal);}
+       if(fill){requestAnimationFrame(function(){fill.style.width=pct+'%';});}
+     });
+   }).catch(function(){var r=document.querySelector('.igi-goal__raised');if(r){r.textContent='';}});
+})();
+</script>
+GSJS;
+
+	echo $css; // phpcs:ignore WordPress.Security.EscapeOutput
+	echo '<div class="igi-gs-top">' . $bar . $hero . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	echo '<div class="igi-gs-bottom"><section class="igi-gs-more"><h2 class="igi-gs-more__h">Support another campaign</h2><p class="igi-gs-more__sub">Every pilot is locally led and delivered on the ground.</p><div class="igi-gs-grid">' . $cards . '</div></section>' . $footer . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	echo $js; // phpcs:ignore WordPress.Security.EscapeOutput
+}
+add_action( 'wp_footer', 'igi_give_single_chrome', 20 );
