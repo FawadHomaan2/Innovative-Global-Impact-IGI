@@ -77,7 +77,7 @@ $igi_year = wp_date( 'Y' );
 		<p class="igi-eyebrow igi-eyebrow--mute"><a href="<?php echo esc_url( home_url( '/terms/' ) ); ?>">Terms &amp; Conditions</a></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"className":"igi-eyebrow igi-eyebrow--mute"} -->
-		<p class="igi-eyebrow igi-eyebrow--mute">Nonprofit organization</p>
+		<p class="igi-eyebrow igi-eyebrow--mute">A U.S. 501(c)(3) nonprofit</p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
