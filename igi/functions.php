@@ -542,3 +542,39 @@ GSJS;
 	echo $js; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 add_action( 'wp_footer', 'igi_give_single_chrome', 20 );
+
+/**
+ * Meta (Facebook) Pixel — base code on all front-end pages.
+ *
+ * Fires PageView on every page, which builds the audience of site visitors so
+ * ads can retarget them and Meta can optimise delivery. Dataset "IGI Market
+ * Data", id 1757827808615609. Donation-completion (Purchase) tracking is handled
+ * separately because GiveWP finalises the gift in an isolated form frame.
+ */
+if ( ! defined( 'IGI_META_PIXEL_ID' ) ) {
+	define( 'IGI_META_PIXEL_ID', '1757827808615609' );
+}
+function igi_meta_pixel() {
+	if ( is_admin() ) {
+		return;
+	}
+	$id = IGI_META_PIXEL_ID;
+	?>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '<?php echo esc_js( $id ); ?>');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=<?php echo rawurlencode( $id ); ?>&amp;ev=PageView&amp;noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+	<?php
+}
+add_action( 'wp_head', 'igi_meta_pixel', 5 );
