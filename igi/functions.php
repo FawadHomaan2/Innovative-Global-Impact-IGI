@@ -587,3 +587,54 @@ fbq('track', 'PageView');
 	<?php
 }
 add_action( 'wp_head', 'igi_meta_pixel', 5 );
+
+/**
+ * Contact form handler.
+ *
+ * The /contact/ form posts here (admin-post.php, action=igi_contact). It blocks
+ * bots with a honeypot, validates and sanitises the fields, emails the site
+ * admin via wp_mail() (which routes through WP Mail SMTP), and redirects back
+ * to the contact page with a success/error flag the pattern renders as a banner.
+ *
+ * No nonce is enforced: the contact page is served from full-page cache, so a
+ * baked-in nonce would go stale and reject real submissions. Spam is handled by
+ * the honeypot plus required-field validation, which is appropriate for a
+ * public contact form (CSRF risk here is negligible).
+ */
+function igi_handle_contact() {
+	$redirect = home_url( '/contact/' );
+
+	// Honeypot: humans leave this empty; bots fill it. Pretend success, send nothing.
+	if ( ! empty( $_POST['igi_hp'] ) ) {
+		wp_safe_redirect( add_query_arg( 'contact', 'sent', $redirect ) );
+		exit;
+	}
+
+	$name    = isset( $_POST['igi_name'] ) ? sanitize_text_field( wp_unslash( $_POST['igi_name'] ) ) : '';
+	$email   = isset( $_POST['igi_email'] ) ? sanitize_email( wp_unslash( $_POST['igi_email'] ) ) : '';
+	$message = isset( $_POST['igi_message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['igi_message'] ) ) : '';
+
+	if ( '' === $name || '' === $message || ! is_email( $email ) ) {
+		wp_safe_redirect( add_query_arg( 'contact', 'error', $redirect ) );
+		exit;
+	}
+
+	$to      = 'admin@innovativeglobalimpact.org';
+	/* translators: %s: sender name */
+	$subject = sprintf( 'New contact message from %s', $name );
+	$body    = "Name: {$name}\n"
+		. "Email: {$email}\n\n"
+		. "Message:\n{$message}\n\n"
+		. "---\nSent from the contact form at " . home_url( '/contact/' );
+	$headers = array(
+		'Content-Type: text/plain; charset=UTF-8',
+		'Reply-To: ' . $name . ' <' . $email . '>',
+	);
+
+	$sent = wp_mail( $to, $subject, $body, $headers );
+
+	wp_safe_redirect( add_query_arg( 'contact', $sent ? 'sent' : 'error', $redirect ) );
+	exit;
+}
+add_action( 'admin_post_nopriv_igi_contact', 'igi_handle_contact' );
+add_action( 'admin_post_igi_contact', 'igi_handle_contact' );
