@@ -619,7 +619,7 @@ function igi_handle_contact() {
 		exit;
 	}
 
-	$to      = 'admin@innovativeglobalimpact.org';
+	$to      = array( 'admin@innovativeglobalimpact.org', 'fawad@innovativeglobalimpact.org' );
 	/* translators: %s: sender name */
 	$subject = sprintf( 'New contact message from %s', $name );
 	$body    = "Name: {$name}\n"
