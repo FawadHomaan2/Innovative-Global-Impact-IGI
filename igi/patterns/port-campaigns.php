@@ -27,7 +27,7 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
 
   <!-- COMPACT INTRO HERO -->
   <section id="main" style="position: relative; padding: clamp(116px, 13vw, 156px) clamp(20px, 5vw, 56px) clamp(44px, 6vw, 72px); background: rgb(23, 18, 14);">
-    <img src="<?php echo esc_url( $igi_uri . 'ghor-water-jerrycans-children.jpg' ); ?>" alt="Children waiting beside dozens of colorful water jerrycans in Ghor" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+    <img fetchpriority="high" decoding="async" src="<?php echo esc_url( 'https://innovativeglobalimpact.org/wp-content/uploads/2026/11/hub-hero-opt.jpg' ); ?>" alt="Children waiting beside dozens of colorful water jerrycans in Ghor" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,18,14,0.86) 0%, rgba(23,18,14,0.72) 55%, rgba(23,18,14,0.9) 100%);"></div>
     <div style="position: relative; max-width: 1280px; margin: 0 auto;">
       <div style="font-family: 'Spline Sans Mono', monospace; font-size: 12.5px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(237, 230, 218); margin-bottom: 22px;">Ways to give</div>
@@ -64,7 +64,7 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
       <!-- WATER · GHOR -->
       <div data-rev style="display: flex; flex-direction: column; background: #fff; border: 1px solid rgb(228, 216, 198); border-radius: 8px; overflow: hidden;">
         <div style="position: relative; aspect-ratio: 4/3; overflow: hidden;">
-          <img src="<?php echo esc_url( $igi_uri . 'ghor-water-families-waiting.jpg' ); ?>" alt="Women and children waiting beside their water containers against a mud-brick wall in Ghor" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <img src="<?php echo esc_url( 'https://innovativeglobalimpact.org/wp-content/uploads/2026/11/water-hero-opt.jpg' ); ?>" alt="Women and children waiting beside their water containers against a mud-brick wall in Ghor" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           <div style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: rgb(36, 28, 23);"></div>
         </div>
         <div style="display: flex; flex-direction: column; flex: 1; padding: clamp(24px, 2.2vw, 32px);">
@@ -93,7 +93,7 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
       <!-- SURVIVAL · GHOR (newborn care photo) -->
       <div data-rev style="display: flex; flex-direction: column; background: #fff; border: 1px solid rgb(228, 216, 198); border-radius: 8px; overflow: hidden;">
         <div style="position: relative; aspect-ratio: 4/3; overflow: hidden;">
-          <img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/08/newborns-scaled.jpg' ) ); ?>" alt="A newborn baby receiving care in a maternity and newborn unit in Ghor" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <img src="<?php echo esc_url( 'https://innovativeglobalimpact.org/wp-content/uploads/2026/11/survival-card-opt.jpg' ); ?>" alt="A newborn baby receiving care in a maternity and newborn unit in Ghor" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           <div style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: rgb(36, 28, 23);"></div>
         </div>
         <div style="display: flex; flex-direction: column; flex: 1; padding: clamp(24px, 2.2vw, 32px);">
@@ -115,7 +115,7 @@ $igi_uri = get_template_directory_uri() . '/assets/images/';
       <!-- OPPORTUNITY · NANGARHAR (real flower photo) -->
       <div data-rev style="display: flex; flex-direction: column; background: #fff; border: 1px solid rgb(228, 216, 198); border-radius: 8px; overflow: hidden;">
         <div style="position: relative; aspect-ratio: 4/3; overflow: hidden;">
-          <img src="<?php echo esc_url( $igi_uri . 'nangarhar-flowers-harvest.jpg' ); ?>" alt="A woman harvesting pink roses in a flower field below mountains in Nangarhar" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <img src="<?php echo esc_url( 'https://innovativeglobalimpact.org/wp-content/uploads/2026/11/opportunity-card-opt.jpg' ); ?>" alt="A woman harvesting pink roses in a flower field below mountains in Nangarhar" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           <div style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: rgb(36, 28, 23);"></div>
         </div>
         <div style="display: flex; flex-direction: column; flex: 1; padding: clamp(24px, 2.2vw, 32px);">

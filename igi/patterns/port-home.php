@@ -14,7 +14,7 @@
 
   
   <section data-dc-tpl="15" id="main" style="position: relative; min-height: clamp(540px, 82vh, 760px); padding-top: clamp(104px, 12vh, 128px); display: flex; align-items: flex-end; background: rgb(23, 18, 14);">
-    <img data-dc-tpl="16" src="/wp-content/themes/igi/assets/images/ghor-landscape-village.jpg" alt="Hillside adobe village in Ghor province against the high-desert mountains" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover;">
+    <img data-dc-tpl="16" fetchpriority="high" decoding="async" src="https://innovativeglobalimpact.org/wp-content/uploads/2026/11/home-hero-opt.jpg" alt="Hillside adobe village in Ghor province against the high-desert mountains" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover;">
     <div data-dc-tpl="17" style="position: absolute; inset: 0px; background: linear-gradient(rgba(23, 18, 14, 0.66) 0%, rgba(23, 18, 14, 0.22) 32%, rgba(23, 18, 14, 0.62) 64%, rgba(23, 18, 14, 0.96) 100%);"></div>
     <div data-dc-tpl="18" style="position: relative; width: 100%; max-width: 1280px; margin: 0px auto; padding: 0px clamp(20px, 5vw, 56px) clamp(48px, 6vw, 84px);">
       <div data-dc-tpl="19" data-rev="" style="font-family: &quot;Spline Sans Mono&quot;, monospace; font-size: clamp(11px, 1.1vw, 12.5px); letter-spacing: 0.18em; text-transform: uppercase; color: rgb(237, 230, 218); margin-bottom: 22px;">Building sustainable local economies</div>

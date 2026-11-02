@@ -403,9 +403,9 @@ add_filter( 'option_siteurl', 'igi_force_canonical_url' );
 function igi_give_single_meta() {
 	$assets = get_template_directory_uri() . '/assets/images/';
 	return array(
-		747 => array( 'slug' => 'water-that-never-reaches-them',     'eyebrow' => 'Water · Tappa-e-Shahida, Ghor', 'title' => 'She lost her baby carrying water',              'blurb' => 'In Tappa-e-Shahida, Ghor, 90 to 100 families share one unreliable water source at the bottom of a steep, icy path. Your gift brings safe water close to home.', 'img' => $assets . 'ghor-water-families-waiting.jpg' ),
-		751 => array( 'slug' => 'when-birth-becomes-survival',        'eyebrow' => 'Survival · Ghor',                 'title' => 'Power failures shouldn’t cost a newborn’s life', 'blurb' => 'Equip a maternity and newborn unit in Ghor with off-grid power, so babies get warmth, oxygen and emergency care even when the electricity fails.',                 'img' => home_url( '/wp-content/uploads/2026/08/newborns-scaled.jpg' ) ),
-		749 => array( 'slug' => 'where-poverty-becomes-opportunity',  'eyebrow' => 'Opportunity · Nangarhar',         'title' => 'Turning local resources into opportunity',        'blurb' => 'Train women in Nangarhar to turn local flowers into sustainable livelihoods through traditional distillation.',                                                 'img' => $assets . 'nangarhar-flowers-harvest.jpg' ),
+		747 => array( 'slug' => 'water-that-never-reaches-them',     'eyebrow' => 'Water · Tappa-e-Shahida, Ghor', 'title' => 'She lost her baby carrying water',              'blurb' => 'In Tappa-e-Shahida, Ghor, 90 to 100 families share one unreliable water source at the bottom of a steep, icy path. Your gift brings safe water close to home.', 'img' => 'https://innovativeglobalimpact.org/wp-content/uploads/2026/11/water-hero-opt.jpg' ),
+		751 => array( 'slug' => 'when-birth-becomes-survival',        'eyebrow' => 'Survival · Ghor',                 'title' => 'Power failures shouldn’t cost a newborn’s life', 'blurb' => 'Equip a maternity and newborn unit in Ghor with off-grid power, so babies get warmth, oxygen and emergency care even when the electricity fails.',                 'img' => 'https://innovativeglobalimpact.org/wp-content/uploads/2026/11/survival-card-opt.jpg' ),
+		749 => array( 'slug' => 'where-poverty-becomes-opportunity',  'eyebrow' => 'Opportunity · Nangarhar',         'title' => 'Turning local resources into opportunity',        'blurb' => 'Train women in Nangarhar to turn local flowers into sustainable livelihoods through traditional distillation.',                                                 'img' => 'https://innovativeglobalimpact.org/wp-content/uploads/2026/11/opportunity-card-opt.jpg' ),
 		137 => array( 'slug' => 'fundraising-campaign',               'eyebrow' => 'General fund · All pilots',       'title' => 'Give where it’s needed most',                 'blurb' => 'Give to IGI’s general fund and we’ll direct your gift to the pilot that needs it most.',                                                                 'img' => home_url( '/wp-content/uploads/2026/09/delivering-equipments-880x620.jpg' ) ),
 	);
 }
@@ -481,7 +481,7 @@ GSCSS;
 			);
 		}
 		$hero = sprintf(
-			'<div class="igi-gs-hero"><img class="igi-gs-hero__img" src="%s" alt=""><div class="igi-gs-hero__wrap"><div class="igi-gs-hero__eyebrow">%s</div><div class="igi-gs-hero__title">%s</div><p class="igi-gs-hero__blurb">%s</p>%s</div></div>',
+			'<div class="igi-gs-hero"><img class="igi-gs-hero__img" src="%s" alt="" fetchpriority="high" decoding="async"><div class="igi-gs-hero__wrap"><div class="igi-gs-hero__eyebrow">%s</div><div class="igi-gs-hero__title">%s</div><p class="igi-gs-hero__blurb">%s</p>%s</div></div>',
 			esc_url( $cur['img'] ),
 			esc_html( $cur['eyebrow'] ),
 			esc_html( $cur['title'] ),
